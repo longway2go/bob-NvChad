@@ -2,17 +2,28 @@
 -- List of all default plugins & their definitions
 local default_plugins = {
 
+  -- "nvim-lua/plenary.nvim"用于简化NeoVim插件的编写过程。
+  -- 使用之，可以轻松地处理异步任务、进行高效的表格操作、执行文件操作系统等。比如：
+  -- 1. 异步任务处理：提供了job模块来创建和管理异步任务，例如运行外部命令、执行长时间运行的操作等。
+  -- 2. 表格操作：提供了Table模块，可以进行快速、灵活的表格操作，如排序、筛选、映射等。
+  -- 3. 文件系统操作：提供了path模块，用于方便地进行文件和路径操作，如获取文件信息、文件读写等。
+  -- 4. Vim函数封装：提供了一些对Vim内置函数的封装、使调用更简洁和灵活。
+  -- 5. 日志记录：提供了日志记录功能，方便调试和追踪代码执行过程。
   "nvim-lua/plenary.nvim",
 
   {
+    -- 通过指定GitHub仓库NvChad/base46的分支为v2.0来引入base46主题。
+    -- 这里定义了build()，当主题安装完成后会被调用。
     "NvChad/base46",
     branch = "v2.0",
     build = function()
+      -- 用来加载所有的语法高亮设置。
       require("base46").load_all_highlights()
     end,
   },
 
   {
+    -- 引入NvChad/ui的v2.0分支。
     "NvChad/ui",
     branch = "v2.0",
     lazy = false,

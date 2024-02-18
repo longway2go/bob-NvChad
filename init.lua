@@ -48,6 +48,7 @@ if not vim.loop.fs_stat(lazypath) then
   require("core.bootstrap").lazy(lazypath)
 end
 
+-- 执行~/.cache/nvim/defaults.lua文件
 dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
 require "plugins"
