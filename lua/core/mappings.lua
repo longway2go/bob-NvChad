@@ -3,6 +3,7 @@
 local M = {}
 
 M.general = {
+  -- Insert模式
   i = {
     -- go to  beginning and end
     ["<C-b>"] = { "<ESC>^i", "Beginning of line" },
@@ -15,6 +16,7 @@ M.general = {
     ["<C-k>"] = { "<Up>", "Move up" },
   },
 
+  -- Normal模式
   n = {
     ["<Esc>"] = { "<cmd> noh <CR>", "Clear highlights" },
     -- switch between windows
@@ -54,10 +56,12 @@ M.general = {
     },
   },
 
+  -- Visual Line模式
   t = {
     ["<C-x>"] = { vim.api.nvim_replace_termcodes("<C-\\><C-N>", true, true, true), "Escape terminal mode" },
   },
 
+  -- Visual模式
   v = {
     ["<Up>"] = { 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', "Move up", opts = { expr = true } },
     ["<Down>"] = { 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', "Move down", opts = { expr = true } },
@@ -65,6 +69,7 @@ M.general = {
     [">"] = { ">gv", "Indent line" },
   },
 
+  -- Visual Block模式
   x = {
     ["j"] = { 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', "Move down", opts = { expr = true } },
     ["k"] = { 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', "Move up", opts = { expr = true } },
@@ -75,6 +80,7 @@ M.general = {
 }
 
 M.tabufline = {
+  -- plugin为true，表示是专为插件定义的
   plugin = true,
 
   n = {

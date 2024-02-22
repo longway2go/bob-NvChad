@@ -283,7 +283,11 @@ local default_plugins = {
 local config = require("core.utils").load_config()
 
 if #config.plugins > 0 then
+  -- 向default_plugins中插入一项:
+  -- default_plugins["import"] = config.plugins
   table.insert(default_plugins, { import = config.plugins })
 end
 
+-- lazy模块实际的路径为：`~/.local/share/nvim/lazy/lazy.nvim/`,由于在lua/core/bootstrap.lua中已经将这个路径记录在了运行时路径的最前面，所以在查找模块的时候可以被优先找到。
+-- config.lazy_nvim在哪里呢？我没有找到
 require("lazy").setup(default_plugins, config.lazy_nvim)

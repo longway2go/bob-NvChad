@@ -1,5 +1,6 @@
 require "core"
 
+-- [[
 -- vim.api 是Neovim提供的一组API，允许通过Lua脚本访问和控制编辑器的各种功能
 -- vim.api.nvim_get_runtime_file() 用于查找运行时文件。
 --     该接口有两个参数：
@@ -9,17 +10,34 @@ require "core"
 -- 针对这里的实际调用，分析如下：
 -- 查找是否存在lua/custom/init.lua文件，如果存在，则记录在custom_init_path变量中
 -- /lua/custom用于用户自定义配置，允许用户添加或修改默认配置，以满足个人需求
+--
+-- /lua/custom/init.lua文件一般用做：
+-- 1. 覆盖NvChad默认配置。比如：修改<leader>键为<C-b>，代码为`vim.opt.leader = "<C-b>"`
+-- 2. 添加自定义映射 --> 这个不是在lua/custom/chadrc.lua中进行的吗？
+-- 3. 添加自定义插件
+-- 4. 配置NeoVim的行为。比如：启用NeoVim的自动补全功能，代码为`vim.opt.completeopt = "menuone.noinsert"`
+-- ]]
 local custom_init_path = vim.api.nvim_get_runtime_file("lua/custom/init.lua", false)[1]
 
 if custom_init_path then
+  -- [[
   -- dofile()是Lua内置函数，用于加载并执行一个Lua文件。
   -- 如果custom_init_path所指定的文件存在，则会被执行。
   -- 这允许Neovim用户将自定义配置放在lua/custom/init.lua中，通过这种方式动态地加载和应用这些配置。
   -- 综上所述，这段代码的作用是检查是否存在一个用户自定义配置文件的路径（custom_init_path），如果这个路径存在，则执行该路径指向的 Lua 文件。这是一种灵活地扩展和个性化 Neovim 配置的方法，使得用户可以轻松地添加或修改默认配置，而无需直接修改主配置文件。这种模式提高了配置的可维护性和用户体验。
+  -- ]]
   dofile(custom_init_path)
 end
 
--- load_mappings()并没有传参数进去，这样执行一遍又有什么意义呢？
+-- load_mappings()并没有传参数进去
+--
+-- vim中绑定配置的快捷键，分为以下场景：
+-- 1. 常规下: 针对vim所处不同的模式下，绑定对应的快捷键
+-- 2. 特殊插件-->忽略，没有做处理
+--
+-- 快捷键的映射配置来源于两处：
+-- 1. lua/core/mappings模块，为系统默认
+-- 2. lua/custom/mappings模块，为自定义
 require("core.utils").load_mappings()
 
 -- vim.fn.stdpath() 是Neovim的内置API，用于获取标准路径。它可以返回一些常见的目录路径，例如配置文件目录、插件目录、数据文件目录等。
@@ -41,14 +59,18 @@ if not vim.loop.fs_stat(lazypath) then
   -- 如果lazypath路径所对应地文件不存在，则执行到这里
   -- 这样可以确保在文件不存在时进行必要的初始化操作。
 
-  -- 生成chadrc模板。
+  -- 提示："Do you want to install example custom config? (y/N): "
+-- 如果输入y，则从https://github.com/NvChad/example_config中下载。
+-- 如果输入其它，则只创建一个~/.config/nvim/lua/custom/chadrc.lua文件，里面写一句话："---@type ChadrcConfig\nlocal M = {}\n\nM.ui = { theme = 'onedark' }\n\nreturn M"
   require("core.bootstrap").gen_chadrc_template()
 
-  -- 加载lazypath路径所对应地文件。
+  -- 加载lazypath路径所对应的文件。
   require("core.bootstrap").lazy(lazypath)
 end
 
 -- 执行~/.cache/nvim/defaults.lua文件
+-- vim.g.base46_cache缓存了最近使用的Base46编码/解码结果，以便提高性能。
+-- vim.g.base46_cache是一个文件夹,位于~/.config/nvim/plugins/base46目录下
 dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
 require "plugins"

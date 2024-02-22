@@ -6,7 +6,7 @@ local merge_tb = vim.tbl_deep_extend
 -- load_config()
 -- 函数作用：加载配置。
 -- 配置来源为两处：
--- 1. lua/core/default_mappings
+-- 1. lua/core/default_config
 -- 2. lua/custom/chadrc
 -- 会将两者的配置项进行合并。若键名重复，2为用户自定义内容，会替换1（默认配置内容）中的重名键值。
 M.load_config = function()
@@ -86,10 +86,12 @@ M.remove_disabled_keys = function(chadrc_mappings, default_mappings)
   return default_mappings
 end
 
+-- [[
 -- 这段代码是一个 Lua 函数，用于在 Neovim 中加载和应用键位映射。它是为了提高 Neovim 用户自定义配置的灵活性和可维护性而设计。
 -- 函数名：load_mappings
 -- 参数 section: 指定了要加载映射的部分或类别
 -- 参数 mapping_opt: 可选参数，提供了默认的映射选项，这些选项将应用于所有键位映射，除非被具体映射的选项覆盖。
+-- ]]
 M.load_mappings = function(section, mapping_opt)
   -- vim.schedule()接口会将函数的执行推迟到Neovim准备好执行Lua函数时。
   vim.schedule(function()
@@ -110,6 +112,10 @@ M.load_mappings = function(section, mapping_opt)
         -- 这样确保了如果用户提供了额外的选项，这些选项会覆盖默认设置中相同的键。
         local default_opts = merge_tb("force", { mode = mode }, mapping_opt or {})
 
+        -- 示例：["<C-b>"] = { "<ESC>^i", "Beginning of line" }
+        -- keybind: "<C-b>"
+        -- mapping_info[0]: "<ESC>^i"
+        -- mapping_info[1]: "Beginning of line"
         for keybind, mapping_info in pairs(mode_values) do
           -- merge default + user opts
           -- 合并表，mapping_info.opts的键值会替换default_opts中的键值
@@ -121,17 +127,22 @@ M.load_mappings = function(section, mapping_opt)
           -- vim.keymap.set()用户设置键位映射
           -- mode指定了映射的模式
           -- keybind是键位
-          -- mapping_info[1] ? 暂不知内容
+          -- mapping_info[1]是实际的指令
           -- opts：映射的额外选项
+          -- opts.desc是快捷键的描述信息
           vim.keymap.set(mode, keybind, mapping_info[1], opts)
         end
       end
     end
 
+    -- mappings来源于两个文件：
+    -- 1. lua/core/mappings.lua
+    -- 2. custom/mappings.lua (如果存在的话)
     -- 拿到合并后的系统配置中的mappings
     local mappings = require("core.utils").load_config().mappings
 
     -- 后面的部分没有看，后面结合实际调用功能去看
+    -- 在init.lua中被调用的时候，没有传入任何参数，因此，这里的代码应该是要被忽略掉的
     if type(section) == "string" then
       mappings[section]["plugin"] = nil
       mappings = { mappings[section] }

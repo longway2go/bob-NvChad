@@ -58,6 +58,10 @@ M.lazy = function(install_path)
 
   -- ?
   -- 说是用来编译base46主题
+  -- Base46是一种将二进制数据转换为文本表示形式的编码方案。它使用46个字符来标识256个可能的字节值，从而将数据扩展为原来的1.84倍。
+  -- vim.g.base46_cache缓存了最近使用的Base46编码/解码结果，以便提高性能。
+  -- vim.g.base46_cache是一个文件夹,位于~/.config/nvim/plugins/base46目录下。这个位置不知道对不对??我没有找到。
+  -- 将主题读取之后，写入都vim.g.base46_cache所指代的位置，以便于提升后续的加载速度。
   require("base46").compile()
 
   -- 将lazy.vim下载到install_path中指定的位置
@@ -66,6 +70,7 @@ M.lazy = function(install_path)
   M.echo "  Installing lazy.nvim & plugins ..."
   local repo = "https://github.com/folke/lazy.nvim.git"
   shell_call { "git", "clone", "--filter=blob:none", "--branch=stable", repo, install_path }
+  -- 将`~/.local/share/nvim/lazy/lazy.nvim/`的路径追加在Vim运行时路径最前面。
   vim.opt.rtp:prepend(install_path)
 
   -- install plugins
@@ -77,7 +82,14 @@ M.lazy = function(install_path)
   require "nvchad.post_install"()
 end
 
+-- [[
 -- 定义M.gen_chadrc_template()，用于生成NeoVim的自定义配置文件模板。
+-- 自定义配置文件模板的文件路径为：~/.config/nvim/lua/custom/
+--
+-- 会提示是否安装示例自定义配置。
+-- 如果输入y，则从https://github.com/NvChad/example_config中下载。
+-- 如果输入其它，则只创建一个~/.config/nvim/lua/custom/chadrc.lua文件，里面写一句话："---@type ChadrcConfig\nlocal M = {}\n\nM.ui = { theme = 'onedark' }\n\nreturn M"
+-- ]]
 M.gen_chadrc_template = function()
   -- path = ~/.config/nvim/lua/custom/
   local path = fn.stdpath "config" .. "/lua/custom"
