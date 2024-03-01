@@ -1,0 +1,443 @@
+{
+	"_type": "Project",
+	"_id": "AAAAAAFF+h6SjaM2Hec=",
+	"name": "NvChad",
+	"ownedElements": [
+		{
+			"_type": "UMLPackage",
+			"_id": "AAAAAAGN+JcqGwF9/RQ=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "NvChad",
+			"ownedElements": [
+				{
+					"_type": "UMLPackage",
+					"_id": "AAAAAAGN+JgaYAGJ2Z8=",
+					"_parent": {
+						"$ref": "AAAAAAGN+JcqGwF9/RQ="
+					},
+					"name": "core",
+					"ownedElements": [
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAGN+JpylQJtEcI=",
+							"_parent": {
+								"$ref": "AAAAAAGN+JgaYAGJ2Z8="
+							},
+							"name": "init.lua"
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAGN+JpAtQIZ3kw=",
+							"_parent": {
+								"$ref": "AAAAAAGN+JgaYAGJ2Z8="
+							},
+							"name": "bootstrap.lua",
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAGN+J3cSwV+sW4=",
+									"_parent": {
+										"$ref": "AAAAAAGN+JpAtQIZ3kw="
+									},
+									"name": "echo",
+									"documentation": "调用M.echo()，会清除屏幕后，加粗显示str变量中的内容",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGN+J61NAWHOIE=",
+											"_parent": {
+												"$ref": "AAAAAAGN+J3cSwV+sW4="
+											},
+											"name": "str",
+											"type": ""
+										}
+									]
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAGN+J7bZwWJYlg=",
+									"_parent": {
+										"$ref": "AAAAAAGN+JpAtQIZ3kw="
+									},
+									"name": "shell_call",
+									"documentation": "自定义local shell_call()的Lua函数，用于在NeoVim中执行系统命令并检查是否成功。",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGN+J8C8wWQjgU=",
+											"_parent": {
+												"$ref": "AAAAAAGN+J7bZwWJYlg="
+											},
+											"name": "args",
+											"documentation": "用于在Neovim中执行系统命令，并检查是否调用成功。",
+											"type": ""
+										}
+									]
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAGN+J/dowWTQB4=",
+									"_parent": {
+										"$ref": "AAAAAAGN+JpAtQIZ3kw="
+									},
+									"name": "lazy",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGN+KAEowWaB3E=",
+											"_parent": {
+												"$ref": "AAAAAAGN+J/dowWTQB4="
+											},
+											"name": "install_path",
+											"type": ""
+										}
+									]
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAGN+KCR4wWc4Ts=",
+									"_parent": {
+										"$ref": "AAAAAAGN+JpAtQIZ3kw="
+									},
+									"name": "gen_chadrc_template",
+									"documentation": "用于生成Neovim的自定义配置文件模板。\n自定义配置文件模板的文件路径为：~/.config/nvim/lua/custom\n\n会提示是否安装示例自定义配置。\n如果输入y，则从https://github.cvom/NvChad/example_config中下载。\n如果输入其它，则只创建一个~/.config/nvim/lua/custom/chadrc.lua文件，里面写一句话：“---@type ChadrcConfig\\nlocal M = {}\\n\\nM.ui = { theme = 'onedark' }\\n\\nreturn M”"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAGN+JpbJwJDD0g=",
+							"_parent": {
+								"$ref": "AAAAAAGN+JgaYAGJ2Z8="
+							},
+							"name": "default_config.lua"
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAGN+JqEqgKXaf8=",
+							"_parent": {
+								"$ref": "AAAAAAGN+JgaYAGJ2Z8="
+							},
+							"name": "mappings.lua"
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAGN+Jqg1ALCpAY=",
+							"_parent": {
+								"$ref": "AAAAAAGN+JgaYAGJ2Z8="
+							},
+							"name": "utils.lua"
+						}
+					]
+				},
+				{
+					"_type": "UMLPackage",
+					"_id": "AAAAAAGN+JihIQGNkOI=",
+					"_parent": {
+						"$ref": "AAAAAAGN+JcqGwF9/RQ="
+					},
+					"name": "plugins",
+					"ownedElements": [
+						{
+							"_type": "UMLPackage",
+							"_id": "AAAAAAGN+JjLMAGR1f4=",
+							"_parent": {
+								"$ref": "AAAAAAGN+JihIQGNkOI="
+							},
+							"name": "configs",
+							"ownedElements": [
+								{
+									"_type": "UMLClass",
+									"_id": "AAAAAAGN+JweyAPorr4=",
+									"_parent": {
+										"$ref": "AAAAAAGN+JjLMAGR1f4="
+									},
+									"name": "cmp.lua"
+								},
+								{
+									"_type": "UMLClass",
+									"_id": "AAAAAAGN+Jw0MwQqMFQ=",
+									"_parent": {
+										"$ref": "AAAAAAGN+JjLMAGR1f4="
+									},
+									"name": "lazy_nvim.lua"
+								},
+								{
+									"_type": "UMLClass",
+									"_id": "AAAAAAGN+JxQSARUY8g=",
+									"_parent": {
+										"$ref": "AAAAAAGN+JjLMAGR1f4="
+									},
+									"name": "lspconfig.lua"
+								},
+								{
+									"_type": "UMLClass",
+									"_id": "AAAAAAGN+JxnUQR+Qxw=",
+									"_parent": {
+										"$ref": "AAAAAAGN+JjLMAGR1f4="
+									},
+									"name": "mason.lua"
+								},
+								{
+									"_type": "UMLClass",
+									"_id": "AAAAAAGN+Jx7PgSojyc=",
+									"_parent": {
+										"$ref": "AAAAAAGN+JjLMAGR1f4="
+									},
+									"name": "nvimtree.lua"
+								},
+								{
+									"_type": "UMLClass",
+									"_id": "AAAAAAGN+JzU/AVL6Zw=",
+									"_parent": {
+										"$ref": "AAAAAAGN+JjLMAGR1f4="
+									},
+									"name": "others.lua"
+								},
+								{
+									"_type": "UMLClass",
+									"_id": "AAAAAAGN+Jz7jwVPvpI=",
+									"_parent": {
+										"$ref": "AAAAAAGN+JjLMAGR1f4="
+									},
+									"name": "telescope.lua"
+								},
+								{
+									"_type": "UMLClass",
+									"_id": "AAAAAAGN+J0loQVTM6E=",
+									"_parent": {
+										"$ref": "AAAAAAGN+JjLMAGR1f4="
+									},
+									"name": "treesitter.lua"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAGN+JvxrQO9IW4=",
+							"_parent": {
+								"$ref": "AAAAAAGN+JihIQGNkOI="
+							},
+							"name": "init.lua"
+						}
+					]
+				},
+				{
+					"_type": "UMLClassDiagram",
+					"_id": "AAAAAAGN+JltvwGY+zQ=",
+					"_parent": {
+						"$ref": "AAAAAAGN+JcqGwF9/RQ="
+					},
+					"name": "ClassDiagram1",
+					"ownedViews": [
+						{
+							"_type": "UMLClassView",
+							"_id": "AAAAAAGN+KQGFgXIP4c=",
+							"_parent": {
+								"$ref": "AAAAAAGN+JltvwGY+zQ="
+							},
+							"model": {
+								"$ref": "AAAAAAGN+JpbJwJDD0g="
+							},
+							"subViews": [
+								{
+									"_type": "UMLNameCompartmentView",
+									"_id": "AAAAAAGN+KQGFgXJcl4=",
+									"_parent": {
+										"$ref": "AAAAAAGN+KQGFgXIP4c="
+									},
+									"model": {
+										"$ref": "AAAAAAGN+JpbJwJDD0g="
+									},
+									"subViews": [
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGN+KQGFgXKboc=",
+											"_parent": {
+												"$ref": "AAAAAAGN+KQGFgXJcl4="
+											},
+											"visible": false,
+											"font": "Arial;13;0",
+											"left": -588,
+											"top": 32,
+											"height": 13
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGN+KQGFgXLPtE=",
+											"_parent": {
+												"$ref": "AAAAAAGN+KQGFgXJcl4="
+											},
+											"font": "Arial;13;1",
+											"left": 613,
+											"top": 407,
+											"width": 111.22998046875,
+											"height": 13,
+											"text": "default_config.lua"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGN+KQGFgXMFAQ=",
+											"_parent": {
+												"$ref": "AAAAAAGN+KQGFgXJcl4="
+											},
+											"font": "Arial;13;0",
+											"left": 613,
+											"top": 422,
+											"width": 111.22998046875,
+											"height": 13,
+											"text": "(from core)"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGN+KQGFgXNjuw=",
+											"_parent": {
+												"$ref": "AAAAAAGN+KQGFgXJcl4="
+											},
+											"visible": false,
+											"font": "Arial;13;0",
+											"left": -588,
+											"top": 32,
+											"height": 13,
+											"horizontalAlignment": 1
+										}
+									],
+									"font": "Arial;13;0",
+									"left": 608,
+									"top": 400,
+									"width": 121.22998046875,
+									"height": 40,
+									"stereotypeLabel": {
+										"$ref": "AAAAAAGN+KQGFgXKboc="
+									},
+									"nameLabel": {
+										"$ref": "AAAAAAGN+KQGFgXLPtE="
+									},
+									"namespaceLabel": {
+										"$ref": "AAAAAAGN+KQGFgXMFAQ="
+									},
+									"propertyLabel": {
+										"$ref": "AAAAAAGN+KQGFgXNjuw="
+									}
+								},
+								{
+									"_type": "UMLAttributeCompartmentView",
+									"_id": "AAAAAAGN+KQGFgXOkrs=",
+									"_parent": {
+										"$ref": "AAAAAAGN+KQGFgXIP4c="
+									},
+									"model": {
+										"$ref": "AAAAAAGN+JpbJwJDD0g="
+									},
+									"font": "Arial;13;0",
+									"left": 608,
+									"top": 440,
+									"width": 121.22998046875,
+									"height": 10
+								},
+								{
+									"_type": "UMLOperationCompartmentView",
+									"_id": "AAAAAAGN+KQGFgXPlqw=",
+									"_parent": {
+										"$ref": "AAAAAAGN+KQGFgXIP4c="
+									},
+									"model": {
+										"$ref": "AAAAAAGN+JpbJwJDD0g="
+									},
+									"font": "Arial;13;0",
+									"left": 608,
+									"top": 450,
+									"width": 121.22998046875,
+									"height": 10
+								},
+								{
+									"_type": "UMLReceptionCompartmentView",
+									"_id": "AAAAAAGN+KQGFgXQqYI=",
+									"_parent": {
+										"$ref": "AAAAAAGN+KQGFgXIP4c="
+									},
+									"model": {
+										"$ref": "AAAAAAGN+JpbJwJDD0g="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": -294,
+									"top": 16,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLTemplateParameterCompartmentView",
+									"_id": "AAAAAAGN+KQGFgXR1kc=",
+									"_parent": {
+										"$ref": "AAAAAAGN+KQGFgXIP4c="
+									},
+									"model": {
+										"$ref": "AAAAAAGN+JpbJwJDD0g="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": -294,
+									"top": 16,
+									"width": 10,
+									"height": 10
+								}
+							],
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 608,
+							"top": 400,
+							"width": 121.22998046875,
+							"height": 60,
+							"showNamespace": true,
+							"nameCompartment": {
+								"$ref": "AAAAAAGN+KQGFgXJcl4="
+							},
+							"attributeCompartment": {
+								"$ref": "AAAAAAGN+KQGFgXOkrs="
+							},
+							"operationCompartment": {
+								"$ref": "AAAAAAGN+KQGFgXPlqw="
+							},
+							"receptionCompartment": {
+								"$ref": "AAAAAAGN+KQGFgXQqYI="
+							},
+							"templateParameterCompartment": {
+								"$ref": "AAAAAAGN+KQGFgXR1kc="
+							}
+						}
+					]
+				},
+				{
+					"_type": "UMLClass",
+					"_id": "AAAAAAGN+JmR7AGbFLg=",
+					"_parent": {
+						"$ref": "AAAAAAGN+JcqGwF9/RQ="
+					},
+					"name": "init.lua"
+				}
+			],
+			"documentation": "存放在~/.config/nvim中。"
+		},
+		{
+			"_type": "UMLModel",
+			"_id": "AAAAAAGN+Jc+QQGA4F8=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "包图",
+			"ownedElements": [
+				{
+					"_type": "UMLPackageDiagram",
+					"_id": "AAAAAAGN+Jc+QQGBPSU=",
+					"_parent": {
+						"$ref": "AAAAAAGN+Jc+QQGA4F8="
+					},
+					"name": "PackageDiagram1"
+				}
+			]
+		}
+	]
+}
