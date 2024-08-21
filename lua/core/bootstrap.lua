@@ -16,7 +16,7 @@ M.echo = function(str)
   --     vim.api.nvim_echo(items, topline, options)
   --
   -- 参数说明：
-  --   items: 一个包含文本和高亮属性的Lua表。每个元素使一个包含两个元素的子表，第一个元素为要显示的文本，第二个元素为该文本的高亮属性。
+  --   items: 一个包含文本和高亮属性的Lua表。每个元素是一个包含两个元素的子表，第一个元素为要显示的文本，第二个元素为该文本的高亮属性。
   --   topline: 布尔值，表示是否清除屏幕上的其它内容。true：清除。false：追加显示。
   --   options: 选项表，用于设置其它显示选项。可选字段包括：
   --            on_event: 字符串，指定在显示文本后执行的事件。
@@ -27,7 +27,7 @@ end
 -- 自定义local shell_call()的Lua函数，用于在NeoVim中执行系统命令并检查是否成功。
 local function shell_call(args)
   -- vim.fn.system(cmd)
-  -- 是Neovi中的VimL函数，用于在Vim启动的shell中执行系统命令，并返回命令的输出结果。
+  -- 是Neovim中的VimL函数，用于在Vim启动的shell中执行系统命令，并返回命令的输出结果。
   -- cmd: 要执行的系统命令，可以是一个字符串。
   -- 用于执行系统命令，并将输出结果存储在output变量中。
   local output = fn.system(args)
@@ -62,6 +62,7 @@ M.lazy = function(install_path)
   -- vim.g.base46_cache缓存了最近使用的Base46编码/解码结果，以便提高性能。
   -- vim.g.base46_cache是一个文件夹,位于~/.config/nvim/plugins/base46目录下。这个位置不知道对不对??我没有找到。
   -- 将主题读取之后，写入都vim.g.base46_cache所指代的位置，以便于提升后续的加载速度。
+  -- ???如果按照这个lazy_path是找不到lua文件的，又是怎么引入的base46lua包，调用的compile()呢？
   require("base46").compile()
 
   -- 将lazy.vim下载到install_path中指定的位置
@@ -75,11 +76,11 @@ M.lazy = function(install_path)
 
   -- install plugins
   -- 说是用来安装其他插件
-  require "plugins"
+  require "plugins" -- 这个包是从哪里来？
 
   -- mason packages & show post_bootstrap screen
   -- 用来执行mason packages和显示post_bootstrap界面
-  require "nvchad.post_install"()
+  require "nvchad.post_install"() -- 这个怎么加载到的，我没有找到对应模块
 end
 
 -- [[
