@@ -72,5 +72,12 @@ end
 -- vim.g.base46_cache缓存了最近使用的Base46编码/解码结果，以便提高性能。
 -- vim.g.base46_cache是一个文件夹,位于~/.config/nvim/plugins/base46目录下
 dofile(vim.g.base46_cache .. "defaults")
+
+-- 将lazypath()追加到vim的runtimepath最前面
 vim.opt.rtp:prepend(lazypath)
+
+-- 加载和配置Neovim的插件。
+-- NvChad是一个Neovim的配置框架，它通过Lua脚本来管理和配置各种插件，从而将Neovim打造成一个功能强大的IDE。
+-- 1. 查找plugins.lua文件，具体未知为：~/.config/nvim/lua/custom/plugins.lua
+-- 2. 执行plugins.lua文件
 require "plugins"
