@@ -4,11 +4,12 @@ local M = {}
 local merge_tb = vim.tbl_deep_extend
 
 -- load_config()
--- 函数作用：加载配置。
+-- 函数作用：加载配置。将chadrc和default config的内容进行合并。以chadrc中的配置为主。
 -- 配置来源为两处：
 -- 1. lua/core/default_config
 -- 2. lua/custom/chadrc
 -- 会将两者的配置项进行合并。若键名重复，2为用户自定义内容，会替换1（默认配置内容）中的重名键值。
+-- 目的就是用户可以对插件进行客制化配置。
 M.load_config = function()
   -- 加载core/default_config.lua文件
   local config = require "core.default_config"
@@ -44,6 +45,7 @@ end
 -- return: default_mappings
 --
 -- 函数作用: 针对default_mappings，删除chadrc_mappings中有的内容，然后返回default_mappings
+--           这个也容易理解，因为要用用户配置的内容覆盖掉default_mappings中的内容
 M.remove_disabled_keys = function(chadrc_mappings, default_mappings)
   -- 如果chadrc_mappings为空，则不作处理
   if not chadrc_mappings then
@@ -88,9 +90,16 @@ end
 
 -- [[
 -- 这段代码是一个 Lua 函数，用于在 Neovim 中加载和应用键位映射。它是为了提高 Neovim 用户自定义配置的灵活性和可维护性而设计。
+-- 函数执行步骤：
+--    函数在vim加载成功之后才去执行。
+--    函数一开始会从chadrc和default_config中读取配置，并进行合并。
+--    之后，会根据传入的section和mappings_opt再次进行合并。
+--    最后，通过调用vim.keymap.set()来设置快捷键
+-- 
 -- 函数名：load_mappings
--- 参数 section: 指定了要加载映射的部分或类别
+-- 参数 section: 指定了要加载映射的部分或类别。如果为nil，则加载所有映射。
 -- 参数 mapping_opt: 可选参数，提供了默认的映射选项，这些选项将应用于所有键位映射，除非被具体映射的选项覆盖。
+--                   mapping_opt是给了另一种客制化mappings的方法
 -- ]]
 M.load_mappings = function(section, mapping_opt)
   -- vim.schedule()接口会将函数的执行推迟到Neovim准备好执行Lua函数时。
@@ -130,6 +139,7 @@ M.load_mappings = function(section, mapping_opt)
           -- mapping_info[1]是实际的指令
           -- opts：映射的额外选项
           -- opts.desc是快捷键的描述信息
+          -- 这里是实际设置vim快捷键的地方
           vim.keymap.set(mode, keybind, mapping_info[1], opts)
         end
       end
@@ -145,13 +155,15 @@ M.load_mappings = function(section, mapping_opt)
     -- 在init.lua中被调用的时候，没有传入任何参数，因此，这里的代码应该是要被忽略掉的
     if type(section) == "string" then
       mappings[section]["plugin"] = nil
+      -- section为给定字符串时，mappings为局部内容。
+      -- 否则，就是全部内容。
       mappings = { mappings[section] }
     end
 
     for _, sect in pairs(mappings) do
       set_section_map(sect)
     end
-  end)
+  end) -- END: vim.schedule()
 end
 
 M.lazy_load = function(plugin)
