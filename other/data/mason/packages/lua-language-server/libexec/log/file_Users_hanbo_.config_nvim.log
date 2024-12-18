@@ -1,0 +1,2320 @@
+[07:35:25.064][info] [#0:/Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:68]: Lua Lsp startup, root: 	/Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec
+[07:35:25.064][info] [#0:/Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:69]: ROOT:	/Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec
+[07:35:25.064][info] [#0:/Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:70]: LOGPATH:	/Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/log
+[07:35:25.064][info] [#0:/Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:71]: METAPATH:	/Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta
+[07:35:25.064][info] [#0:/Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:72]: VERSION:	3.13.4
+[07:35:25.085][info] [#0:script/proto/proto.lua:260]: Listen Mode: stdio
+[07:35:25.085][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 2.251 MB
+        # 00 : 2.251 MB
+        # 01 : 0.000 MB
+        # 02 : 0.000 MB
+        # 03 : 0.000 MB
+        # 04 : 0.000 MB
+    --------------- Coroutine ---------------
+        Total:     0
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      0
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[07:35:25.193][info] [#0:script/client.lua:657]: Client init	{
+  capabilities = {
+    general = {
+      positionEncodings = { "utf-16" }
+    },
+    textDocument = {
+      callHierarchy = {
+        dynamicRegistration = false
+      },
+      codeAction = {
+        codeActionLiteralSupport = {
+          codeActionKind = {
+            valueSet = { "", "quickfix", "refactor", "refactor.extract", "refactor.inline", "refactor.rewrite", "source", "source.organizeImports" }
+          }
+        },
+        dataSupport = true,
+        dynamicRegistration = true,
+        isPreferredSupport = true,
+        resolveSupport = {
+          properties = { "edit" }
+        }
+      },
+      completion = {
+        completionItem = {
+          commitCharactersSupport = true,
+          deprecatedSupport = true,
+          documentationFormat = { "markdown", "plaintext" },
+          insertReplaceSupport = true,
+          labelDetailsSupport = true,
+          preselectSupport = true,
+          resolveSupport = {
+            properties = { "documentation", "detail", "additionalTextEdits" }
+          },
+          snippetSupport = true,
+          tagSupport = {
+            valueSet = { 1 }
+          }
+        },
+        completionItemKind = {
+          valueSet = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 }
+        },
+        completionList = {
+          itemDefaults = { "editRange", "insertTextFormat", "insertTextMode", "data" }
+        },
+        contextSupport = false,
+        dynamicRegistration = false
+      },
+      declaration = {
+        linkSupport = true
+      },
+      definition = {
+        dynamicRegistration = true,
+        linkSupport = true
+      },
+      diagnostic = {
+        dynamicRegistration = false
+      },
+      documentHighlight = {
+        dynamicRegistration = false
+      },
+      documentSymbol = {
+        dynamicRegistration = false,
+        hierarchicalDocumentSymbolSupport = true,
+        symbolKind = {
+          valueSet = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 }
+        }
+      },
+      formatting = {
+        dynamicRegistration = true
+      },
+      hover = {
+        contentFormat = { "markdown", "plaintext" },
+        dynamicRegistration = true
+      },
+      implementation = {
+        linkSupport = true
+      },
+      inlayHint = {
+        dynamicRegistration = true,
+        resolveSupport = {
+          properties = { "textEdits", "tooltip", "location", "command" }
+        }
+      },
+      publishDiagnostics = {
+        dataSupport = true,
+        relatedInformation = true,
+        tagSupport = {
+          valueSet = { 1, 2 }
+        }
+      },
+      rangeFormatting = {
+        dynamicRegistration = true
+      },
+      references = {
+        dynamicRegistration = false
+      },
+      rename = {
+        dynamicRegistration = true,
+        prepareSupport = true
+      },
+      semanticTokens = {
+        augmentsSyntaxTokens = true,
+        dynamicRegistration = false,
+        formats = { "relative" },
+        multilineTokenSupport = false,
+        overlappingTokenSupport = true,
+        requests = {
+          full = {
+            delta = true
+          },
+          range = false
+        },
+        serverCancelSupport = false,
+        tokenModifiers = { "declaration", "definition", "readonly", "static", "deprecated", "abstract", "async", "modification", "documentation", "defaultLibrary" },
+        tokenTypes = { "namespace", "type", "class", "enum", "interface", "struct", "typeParameter", "parameter", "variable", "property", "enumMember", "event", "function", "method", "macro", "keyword", "modifier", "comment", "string", "number", "regexp", "operator", "decorator" }
+      },
+      signatureHelp = {
+        dynamicRegistration = false,
+        signatureInformation = {
+          activeParameterSupport = true,
+          documentationFormat = { "markdown", "plaintext" },
+          parameterInformation = {
+            labelOffsetSupport = true
+          }
+        }
+      },
+      synchronization = {
+        didSave = true,
+        dynamicRegistration = false,
+        willSave = true,
+        willSaveWaitUntil = true
+      },
+      typeDefinition = {
+        linkSupport = true
+      }
+    },
+    window = {
+      showDocument = {
+        support = true
+      },
+      showMessage = {
+        messageActionItem = {
+          additionalPropertiesSupport = false
+        }
+      },
+      workDoneProgress = true
+    },
+    workspace = {
+      applyEdit = true,
+      configuration = true,
+      didChangeConfiguration = {
+        dynamicRegistration = false
+      },
+      didChangeWatchedFiles = {
+        dynamicRegistration = true,
+        relativePatternSupport = true
+      },
+      inlayHint = {
+        refreshSupport = true
+      },
+      semanticTokens = {
+        refreshSupport = true
+      },
+      symbol = {
+        dynamicRegistration = false,
+        symbolKind = {
+          valueSet = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 }
+        }
+      },
+      workspaceEdit = {
+        resourceOperations = { "rename", "create", "delete" }
+      },
+      workspaceFolders = true
+    }
+  },
+  clientInfo = {
+    name = "Neovim",
+    version = "0.10.2"
+  },
+  initializationOptions = {},
+  processId = 25126,
+  rootPath = "/Users/hanbo/.config/nvim",
+  rootUri = "file:///Users/hanbo/.config/nvim",
+  trace = "off",
+  workDoneToken = "1",
+  workspaceFolders = { {
+      name = "/Users/hanbo/.config/nvim",
+      uri = "file:///Users/hanbo/.config/nvim"
+    } }
+}
+[07:35:25.194][info] [#0:script/language.lua:137]: VSC language: nil
+[07:35:25.194][info] [#0:script/language.lua:138]: LS  language: en-us
+[07:35:25.194][info] [#0:script/workspace/workspace.lua:38]: Workspace init root: 	file:///Users/hanbo/.config/nvim
+[07:35:25.194][info] [#0:script/workspace/workspace.lua:42]: Log path: 	/Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/log/file_Users_hanbo_.config_nvim.log
+[07:35:25.195][info] [#0:script/workspace/workspace.lua:48]: Workspace create: 	file:///Users/hanbo/.config/nvim
+[07:35:25.513][info] [#0:script/provider/provider.lua:48]: Load config from client	file:///Users/hanbo/.config/nvim
+[07:35:25.514][info] [#0:script/provider/provider.lua:49]: {
+  Lua = {
+    diagnostics = {
+      globals = { "vim" }
+    },
+    workspace = {
+      library = {
+        ["/Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy"] = true,
+        ["/Users/hanbo/.local/share/nvim/lazy/ui/nvchad_types"] = true,
+        ["/opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua"] = true,
+        ["/opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp"] = true
+      },
+      maxPreload = 100000,
+      preloadFileSize = 10000
+    }
+  }
+}
+[07:35:25.515][info] [#0:script/provider/provider.lua:48]: Load config from client	file:///Users/hanbo/.config/nvim
+[07:35:25.515][info] [#0:script/provider/provider.lua:49]: {
+  Lua = {
+    diagnostics = {
+      globals = { "vim" }
+    },
+    workspace = {
+      library = {
+        ["/Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy"] = true,
+        ["/Users/hanbo/.local/share/nvim/lazy/ui/nvchad_types"] = true,
+        ["/opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua"] = true,
+        ["/opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp"] = true
+      },
+      maxPreload = 100000,
+      preloadFileSize = 10000
+    }
+  }
+}
+[07:35:25.621][info] [#0:script/provider/provider.lua:64]: Load config from client	fallback
+[07:35:25.621][info] [#0:script/provider/provider.lua:65]: {
+  Lua = {
+    diagnostics = {
+      globals = { "vim" }
+    },
+    workspace = {
+      library = {
+        ["/Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy"] = true,
+        ["/Users/hanbo/.local/share/nvim/lazy/ui/nvchad_types"] = true,
+        ["/opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua"] = true,
+        ["/opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp"] = true
+      },
+      maxPreload = 100000,
+      preloadFileSize = 10000
+    }
+  }
+}
+[07:35:25.621][info] [#0:script/provider/provider.lua:64]: Load config from client	fallback
+[07:35:25.622][info] [#0:script/provider/provider.lua:65]: {
+  Lua = {
+    diagnostics = {
+      globals = { "vim" }
+    },
+    workspace = {
+      library = {
+        ["/Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy"] = true,
+        ["/Users/hanbo/.local/share/nvim/lazy/ui/nvchad_types"] = true,
+        ["/opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua"] = true,
+        ["/opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp"] = true
+      },
+      maxPreload = 100000,
+      preloadFileSize = 10000
+    }
+  }
+}
+[07:35:25.731][info] [#0:script/library.lua:212]: Init builtin library at:	file:///Users/hanbo/.config/nvim
+[07:35:25.745][info] [#0:script/library.lua:212]: Init builtin library at:	nil
+[07:35:25.859][info] [#0:script/workspace/workspace.lua:324]: Preload start:	file:///Users/hanbo/.config/nvim
+[07:35:25.864][info] [#0:script/workspace/workspace.lua:330]: Scan files at:	file:///Users/hanbo/.config/nvim
+[07:35:25.865][info] [#0:script/workspace/workspace.lua:324]: Preload start:	<fallback>
+[07:35:25.868][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:25.872][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/utf8.lua
+[07:35:25.873][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/debug.lua
+[07:35:25.873][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/table.lua
+[07:35:25.873][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/os.lua
+[07:35:25.873][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/lazy/ui/nvchad_types
+[07:35:25.873][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:25.874][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:25.878][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/utf8.lua
+[07:35:25.878][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/debug.lua
+[07:35:25.878][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/table.lua
+[07:35:25.879][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/os.lua
+[07:35:25.879][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/lazy/ui/nvchad_types
+[07:35:25.879][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:25.882][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/package.lua
+[07:35:25.882][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/math.lua
+[07:35:25.882][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/string.lua
+[07:35:25.882][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/coroutine.lua
+[07:35:25.882][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/builtin.lua
+[07:35:25.882][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/io.lua
+[07:35:25.882][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/basic.lua
+[07:35:25.883][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:25.886][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/package.lua
+[07:35:25.886][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/math.lua
+[07:35:25.886][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/string.lua
+[07:35:25.886][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/coroutine.lua
+[07:35:25.886][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/builtin.lua
+[07:35:25.887][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/io.lua
+[07:35:25.887][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/basic.lua
+[07:35:25.887][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:25.999][info] [#0:script/workspace/workspace.lua:379]: Found 192 files at:	<fallback>
+[07:35:25.999][info] [#0:script/workspace/loading.lua:160]: Load files from disk:	<fallback>
+[07:35:25.999][info] [#0:script/workspace/workspace.lua:379]: Found 207 files at:	file:///Users/hanbo/.config/nvim
+[07:35:25.999][info] [#0:script/workspace/loading.lua:160]: Load files from disk:	file:///Users/hanbo/.config/nvim
+[07:35:26.001][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/loader.lua , size = 15.741 KB
+[07:35:26.016][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.016][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/loader.lua
+[07:35:26.016][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/shared.lua , size = 29.331 KB
+[07:35:26.032][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.033][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta.lua , size = 0.977 KB
+[07:35:26.033][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.033][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/shared.lua
+[07:35:26.033][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta.lua
+[07:35:26.033][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/ui/clipboard/osc52.lua , size = 2.137 KB
+[07:35:26.035][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.035][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/ui/clipboard/osc52.lua
+[07:35:26.035][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/diagnostic.lua , size = 69.172 KB
+[07:35:26.060][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.060][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/diagnostic.lua
+[07:35:26.060][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_inspector.lua , size = 7.494 KB
+[07:35:26.063][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.063][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_inspector.lua
+[07:35:26.063][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/treesitter/_meta.lua , size = 4.483 KB
+[07:35:26.067][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.067][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/treesitter/_meta.lua
+[07:35:26.067][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/treesitter/_fold.lua , size = 14.081 KB
+[07:35:26.071][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.071][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/treesitter/_fold.lua
+[07:35:26.071][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/treesitter/_range.lua , size = 3.869 KB
+[07:35:26.073][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.073][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/treesitter/_range.lua
+[07:35:26.073][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/treesitter/health.lua , size = 0.856 KB
+[07:35:26.073][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.073][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/treesitter/health.lua
+[07:35:26.073][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/treesitter/dev.lua , size = 19.644 KB
+[07:35:26.079][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.079][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/treesitter/dev.lua
+[07:35:26.079][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/treesitter/languagetree.lua , size = 33.292 KB
+[07:35:26.089][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.089][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/treesitter/languagetree.lua
+[07:35:26.089][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/treesitter/language.lua , size = 3.684 KB
+[07:35:26.091][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.091][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/treesitter/language.lua
+[07:35:26.091][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/treesitter/query.lua , size = 32.301 KB
+[07:35:26.102][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.102][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/treesitter/query.lua
+[07:35:26.102][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/treesitter/highlighter.lua , size = 11.811 KB
+[07:35:26.106][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.106][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/treesitter/highlighter.lua
+[07:35:26.106][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/treesitter/_query_linter.lua , size = 7.627 KB
+[07:35:26.109][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.109][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/treesitter/_query_linter.lua
+[07:35:26.109][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/health.lua , size = 12.684 KB
+[07:35:26.113][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.113][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/health.lua
+[07:35:26.113][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/keymap.lua , size = 3.682 KB
+[07:35:26.114][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.114][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/keymap.lua
+[07:35:26.114][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/re.lua , size = 6.495 KB
+[07:35:26.117][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.117][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/re.lua
+[07:35:26.117][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/secure.lua , size = 5.018 KB
+[07:35:26.119][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.119][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/secure.lua
+[07:35:26.119][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/glob.lua , size = 3.001 KB
+[07:35:26.120][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.120][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/glob.lua
+[07:35:26.120][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_editor.lua , size = 34.328 KB
+[07:35:26.129][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.129][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_editor.lua
+[07:35:26.129][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/provider/python.lua , size = 4.224 KB
+[07:35:26.131][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.131][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/provider/python.lua
+[07:35:26.131][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/provider/ruby.lua , size = 1.563 KB
+[07:35:26.136][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.136][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/provider/ruby.lua
+[07:35:26.136][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/provider/perl.lua , size = 1.998 KB
+[07:35:26.137][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.137][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/provider/perl.lua
+[07:35:26.137][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/highlight.lua , size = 4.526 KB
+[07:35:26.138][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.138][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/highlight.lua
+[07:35:26.138][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_system.lua , size = 9.135 KB
+[07:35:26.142][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.142][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_system.lua
+[07:35:26.142][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_meta.lua , size = 0.440 KB
+[07:35:26.142][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.142][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_meta.lua
+[07:35:26.142][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/diagnostic.lua , size = 13.852 KB
+[07:35:26.146][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.146][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/diagnostic.lua
+[07:35:26.146][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/protocol.lua , size = 48.943 KB
+[07:35:26.151][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.151][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/protocol.lua
+[07:35:26.151][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_snippet_grammar.lua , size = 6.179 KB
+[07:35:26.154][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.154][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_snippet_grammar.lua
+[07:35:26.154][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/health.lua , size = 5.398 KB
+[07:35:26.156][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.156][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/health.lua
+[07:35:26.156][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/codelens.lua , size = 9.336 KB
+[07:35:26.158][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.158][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/codelens.lua
+[07:35:26.159][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_meta/protocol.lua , size = 175.343 KB
+[07:35:26.194][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.194][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_meta/protocol.lua
+[07:35:26.194][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_changetracking.lua , size = 11.492 KB
+[07:35:26.197][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.197][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_changetracking.lua
+[07:35:26.197][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_dynamic.lua , size = 2.973 KB
+[07:35:26.198][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.198][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_dynamic.lua
+[07:35:26.198][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_watchfiles.lua , size = 6.889 KB
+[07:35:26.200][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.200][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_watchfiles.lua
+[07:35:26.200][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/sync.lua , size = 16.226 KB
+[07:35:26.204][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.204][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/sync.lua
+[07:35:26.204][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_completion.lua , size = 8.965 KB
+[07:35:26.207][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.207][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_completion.lua
+[07:35:26.207][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/log.lua , size = 4.673 KB
+[07:35:26.208][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.208][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/log.lua
+[07:35:26.208][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/util.lua , size = 77.017 KB
+[07:35:26.229][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.229][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/util.lua
+[07:35:26.229][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/buf.lua , size = 31.091 KB
+[07:35:26.237][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.237][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/buf.lua
+[07:35:26.237][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/handlers.lua , size = 26.781 KB
+[07:35:26.244][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.244][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/handlers.lua
+[07:35:26.244][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/inlay_hint.lua , size = 12.172 KB
+[07:35:26.247][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.247][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/inlay_hint.lua
+[07:35:26.247][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_tagfunc.lua , size = 2.787 KB
+[07:35:26.248][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.248][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_tagfunc.lua
+[07:35:26.248][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/rpc.lua , size = 25.991 KB
+[07:35:26.255][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.256][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/rpc.lua
+[07:35:26.256][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/semantic_tokens.lua , size = 26.267 KB
+[07:35:26.262][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.262][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/semantic_tokens.lua
+[07:35:26.262][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/client.lua , size = 38.013 KB
+[07:35:26.284][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.284][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/client.lua
+[07:35:26.284][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/fs.lua , size = 18.719 KB
+[07:35:26.289][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.289][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/fs.lua
+[07:35:26.289][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/api_keysets.lua , size = 8.292 KB
+[07:35:26.292][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.292][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/api_keysets.lua
+[07:35:26.292][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/vvars.lua , size = 25.272 KB
+[07:35:26.296][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.296][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/vvars.lua
+[07:35:26.296][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/builtin.lua , size = 11.183 KB
+[07:35:26.298][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.298][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/builtin.lua
+[07:35:26.298][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/regex.lua , size = 1.347 KB
+[07:35:26.298][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.298][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/regex.lua
+[07:35:26.298][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/diff.lua , size = 2.492 KB
+[07:35:26.299][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.299][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/diff.lua
+[07:35:26.299][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/json.lua , size = 1.359 KB
+[07:35:26.299][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.299][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/json.lua
+[07:35:26.299][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.300][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/spell.lua , size = 0.943 KB
+[07:35:26.300][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.300][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/spell.lua
+[07:35:26.300][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/builtin_types.lua , size = 3.362 KB
+[07:35:26.301][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.301][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/builtin_types.lua
+[07:35:26.301][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/re.lua , size = 2.217 KB
+[07:35:26.302][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.302][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/re.lua
+[07:35:26.302][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/lpeg.lua , size = 15.348 KB
+[07:35:26.305][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.305][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/lpeg.lua
+[07:35:26.305][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/mpack.lua , size = 0.478 KB
+[07:35:26.305][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.305][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/mpack.lua
+[07:35:26.305][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/options.lua , size = 323.972 KB
+[07:35:26.358][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.358][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/options.lua
+[07:35:26.358][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/vimfn.lua , size = 398.838 KB
+[07:35:26.434][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.434][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/api_keysets_extra.lua , size = 4.535 KB
+[07:35:26.435][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.435][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/api_keysets_extra.lua
+[07:35:26.436][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/vimfn.lua
+[07:35:26.436][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/api.lua , size = 97.321 KB
+[07:35:26.453][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.453][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/misc.lua , size = 0.291 KB
+[07:35:26.453][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.453][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/misc.lua
+[07:35:26.453][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/base64.lua , size = 0.307 KB
+[07:35:26.454][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.454][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/base64.lua
+[07:35:26.454][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/inspect.lua , size = 8.864 KB
+[07:35:26.456][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.456][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/inspect.lua
+[07:35:26.456][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/iter.lua , size = 25.504 KB
+[07:35:26.464][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.464][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_meta/api.lua
+[07:35:26.464][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/iter.lua
+[07:35:26.464][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.464][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp.lua , size = 40.430 KB
+[07:35:26.475][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.475][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp.lua
+[07:35:26.475][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/termcap.lua , size = 3.103 KB
+[07:35:26.476][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.476][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/termcap.lua
+[07:35:26.476][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/filetype/detect.lua , size = 57.151 KB
+[07:35:26.492][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.492][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/filetype/detect.lua
+[07:35:26.492][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/filetype/options.lua , size = 2.559 KB
+[07:35:26.493][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.493][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/filetype/options.lua
+[07:35:26.493][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_options.lua , size = 25.519 KB
+[07:35:26.499][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.499][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_options.lua
+[07:35:26.499][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_comment.lua , size = 8.743 KB
+[07:35:26.502][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.502][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_comment.lua
+[07:35:26.502][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/version.lua , size = 13.605 KB
+[07:35:26.506][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.506][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/version.lua
+[07:35:26.506][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_defaults.lua , size = 18.695 KB
+[07:35:26.511][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.511][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_defaults.lua
+[07:35:26.511][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/uri.lua , size = 3.569 KB
+[07:35:26.512][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.512][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/uri.lua
+[07:35:26.512][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/vimhelp.lua , size = 0.967 KB
+[07:35:26.513][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.513][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/vimhelp.lua
+[07:35:26.513][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/treesitter.lua , size = 14.036 KB
+[07:35:26.517][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.517][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/treesitter.lua
+[07:35:26.517][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/ui.lua , size = 5.396 KB
+[07:35:26.518][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.518][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/ui.lua
+[07:35:26.518][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/func.lua , size = 1.753 KB
+[07:35:26.519][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.519][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/func.lua
+[07:35:26.519][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/provider.lua , size = 0.197 KB
+[07:35:26.519][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.519][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/provider.lua
+[07:35:26.519][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_init_packages.lua , size = 3.023 KB
+[07:35:26.520][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.520][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_init_packages.lua
+[07:35:26.520][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/filetype.lua , size = 68.524 KB
+[07:35:26.536][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.536][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/filetype.lua
+[07:35:26.536][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/snippet.lua , size = 20.081 KB
+[07:35:26.542][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.542][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/snippet.lua
+[07:35:26.542][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/text.lua , size = 0.812 KB
+[07:35:26.543][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.543][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/text.lua
+[07:35:26.543][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_watch.lua , size = 8.901 KB
+[07:35:26.546][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.546][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/_watch.lua
+[07:35:26.546][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/func/_memoize.lua , size = 1.354 KB
+[07:35:26.546][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.546][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/func/_memoize.lua
+[07:35:26.546][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/F.lua , size = 1.076 KB
+[07:35:26.547][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.547][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/F.lua
+[07:35:26.547][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/coxpcall.lua , size = 3.451 KB
+[07:35:26.548][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.548][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/coxpcall.lua
+[07:35:26.548][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/nvim/health.lua , size = 12.509 KB
+[07:35:26.551][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.551][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/nvim/health.lua
+[07:35:26.551][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/provider/python/health.lua , size = 16.369 KB
+[07:35:26.555][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.555][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/provider/python/health.lua
+[07:35:26.555][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/provider/perl/health.lua , size = 2.752 KB
+[07:35:26.556][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.556][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/provider/perl/health.lua
+[07:35:26.556][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/provider/node/health.lua , size = 3.375 KB
+[07:35:26.557][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.557][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/provider/node/health.lua
+[07:35:26.557][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/provider/ruby/health.lua , size = 2.211 KB
+[07:35:26.558][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.558][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/provider/ruby/health.lua
+[07:35:26.558][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/provider/clipboard/health.lua , size = 1.151 KB
+[07:35:26.558][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.558][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/provider/clipboard/health.lua
+[07:35:26.558][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/tohtml.lua , size = 42.432 KB
+[07:35:26.600][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.600][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/tohtml.lua
+[07:35:26.600][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/man.lua , size = 23.687 KB
+[07:35:26.607][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.607][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/man.lua
+[07:35:26.607][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.607][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/_vim9script.lua , size = 15.418 KB
+[07:35:26.612][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.612][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/_vim9script.lua
+[07:35:26.612][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/editorconfig.lua , size = 10.443 KB
+[07:35:26.615][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua
+[07:35:26.615][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/basic.lua , size = 15.841 KB
+[07:35:26.619][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/basic.lua
+[07:35:26.619][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/basic.lua
+[07:35:26.619][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/editorconfig.lua
+[07:35:26.619][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/io.lua , size = 6.364 KB
+[07:35:26.621][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/io.lua
+[07:35:26.621][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/builtin.lua , size = 0.302 KB
+[07:35:26.621][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/builtin.lua
+[07:35:26.621][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/io.lua
+[07:35:26.621][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/builtin.lua
+[07:35:26.621][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/coroutine.lua , size = 2.590 KB
+[07:35:26.622][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/coroutine.lua
+[07:35:26.622][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/coroutine.lua
+[07:35:26.622][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/string.lua , size = 6.327 KB
+[07:35:26.624][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/string.lua
+[07:35:26.624][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/string.lua
+[07:35:26.624][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/string.lua
+[07:35:26.624][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/math.lua , size = 8.509 KB
+[07:35:26.626][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/math.lua
+[07:35:26.626][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/math.lua
+[07:35:26.626][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/package.lua , size = 2.944 KB
+[07:35:26.627][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/package.lua
+[07:35:26.627][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/package.lua
+[07:35:26.627][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/init.lua , size = 3.749 KB
+[07:35:26.629][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.629][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/init.lua
+[07:35:26.629][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/minit.lua , size = 4.986 KB
+[07:35:26.631][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.631][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/minit.lua
+[07:35:26.631][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/core/loader.lua , size = 14.966 KB
+[07:35:26.636][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.636][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/core/loader.lua
+[07:35:26.636][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/core/handler/event.lua , size = 4.956 KB
+[07:35:26.638][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.638][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/core/handler/event.lua
+[07:35:26.638][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.638][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/core/handler/init.lua , size = 3.170 KB
+[07:35:26.639][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.639][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/core/handler/init.lua
+[07:35:26.639][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/core/handler/keys.lua , size = 5.294 KB
+[07:35:26.642][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.642][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/core/handler/keys.lua
+[07:35:26.642][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/core/handler/ft.lua , size = 0.442 KB
+[07:35:26.642][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.642][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/core/handler/ft.lua
+[07:35:26.642][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/core/handler/cmd.lua , size = 1.638 KB
+[07:35:26.643][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.643][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/core/handler/cmd.lua
+[07:35:26.643][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/core/cache.lua , size = 16.584 KB
+[07:35:26.648][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.648][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/core/cache.lua
+[07:35:26.648][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/core/plugin.lua , size = 12.370 KB
+[07:35:26.653][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.653][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/core/plugin.lua
+[07:35:26.653][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/core/fragments.lua , size = 4.215 KB
+[07:35:26.655][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.655][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/core/fragments.lua
+[07:35:26.655][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/core/meta.lua , size = 9.355 KB
+[07:35:26.658][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.658][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/core/meta.lua
+[07:35:26.658][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/core/config.lua , size = 11.991 KB
+[07:35:26.661][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.661][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/core/config.lua
+[07:35:26.661][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/core/util.lua , size = 12.333 KB
+[07:35:26.667][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.667][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/core/util.lua
+[07:35:26.667][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/health.lua , size = 5.792 KB
+[07:35:26.669][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.669][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/health.lua
+[07:35:26.669][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.669][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/build.lua , size = 3.018 KB
+[07:35:26.670][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.670][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/build.lua
+[07:35:26.670][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/terminal.lua , size = 2.394 KB
+[07:35:26.671][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.671][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/terminal.lua
+[07:35:26.671][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/async.lua , size = 4.302 KB
+[07:35:26.674][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.674][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/async.lua
+[07:35:26.674][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/state.lua , size = 0.859 KB
+[07:35:26.674][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.674][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/state.lua
+[07:35:26.674][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/stats.lua , size = 2.153 KB
+[07:35:26.675][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.675][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/stats.lua
+[07:35:26.675][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/status.lua , size = 0.353 KB
+[07:35:26.675][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.675][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/status.lua
+[07:35:26.675][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/help.lua , size = 2.216 KB
+[07:35:26.676][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.676][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/help.lua
+[07:35:26.676][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/view/init.lua , size = 9.394 KB
+[07:35:26.680][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.680][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/view/init.lua
+[07:35:26.680][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.680][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/view/colors.lua , size = 1.820 KB
+[07:35:26.681][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.681][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/view/colors.lua
+[07:35:26.681][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/view/diff.lua , size = 1.585 KB
+[07:35:26.682][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.682][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/view/diff.lua
+[07:35:26.682][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/view/float.lua , size = 9.536 KB
+[07:35:26.686][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.686][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/view/float.lua
+[07:35:26.686][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/view/sections.lua , size = 2.430 KB
+[07:35:26.687][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.687][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/view/sections.lua
+[07:35:26.687][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/view/config.lua , size = 3.507 KB
+[07:35:26.688][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.688][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/view/config.lua
+[07:35:26.688][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/view/commands.lua , size = 3.899 KB
+[07:35:26.689][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.689][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/view/commands.lua
+[07:35:26.689][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/view/render.lua , size = 23.020 KB
+[07:35:26.698][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.698][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/view/render.lua
+[07:35:26.698][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.698][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/view/text.lua , size = 3.813 KB
+[07:35:26.700][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.700][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/view/text.lua
+[07:35:26.700][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/docs.lua , size = 4.729 KB
+[07:35:26.702][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.702][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/docs.lua
+[07:35:26.702][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/manage/init.lua , size = 5.940 KB
+[07:35:26.704][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.704][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/manage/init.lua
+[07:35:26.704][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/manage/git.lua , size = 6.279 KB
+[07:35:26.707][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.707][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/manage/git.lua
+[07:35:26.707][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/manage/reloader.lua , size = 2.817 KB
+[07:35:26.708][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.708][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/manage/reloader.lua
+[07:35:26.708][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/manage/lock.lua , size = 1.668 KB
+[07:35:26.709][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.709][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/manage/lock.lua
+[07:35:26.709][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/manage/checker.lua , size = 2.479 KB
+[07:35:26.710][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.710][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/manage/checker.lua
+[07:35:26.710][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.710][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/manage/task/init.lua , size = 5.805 KB
+[07:35:26.713][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.713][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/manage/task/init.lua
+[07:35:26.713][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/manage/task/git.lua , size = 10.135 KB
+[07:35:26.716][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.716][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/manage/task/git.lua
+[07:35:26.716][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/manage/task/plugin.lua , size = 2.765 KB
+[07:35:26.717][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.717][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/manage/task/plugin.lua
+[07:35:26.717][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/manage/task/fs.lua , size = 1.002 KB
+[07:35:26.718][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.718][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/manage/task/fs.lua
+[07:35:26.718][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/manage/semver.lua , size = 4.455 KB
+[07:35:26.720][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.720][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/manage/semver.lua
+[07:35:26.720][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/manage/runner.lua , size = 4.847 KB
+[07:35:26.722][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.722][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/manage/runner.lua
+[07:35:26.722][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.722][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/manage/process.lua , size = 5.447 KB
+[07:35:26.724][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.724][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/manage/process.lua
+[07:35:26.724][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/types.lua , size = 3.732 KB
+[07:35:26.726][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.726][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/types.lua
+[07:35:26.726][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/util.lua , size = 6.888 KB
+[07:35:26.729][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.729][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/util.lua
+[07:35:26.729][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/community/init.lua , size = 0.511 KB
+[07:35:26.729][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.729][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/community/init.lua
+[07:35:26.729][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/community/specs.lua , size = 0.115 KB
+[07:35:26.729][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.729][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/community/specs.lua
+[07:35:26.729][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/community/_generated.lua , size = 58.290 KB
+[07:35:26.739][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.739][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/community/_generated.lua
+[07:35:26.739][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/pkg/packspec.lua , size = 1.137 KB
+[07:35:26.739][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.739][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/pkg/packspec.lua
+[07:35:26.739][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/pkg/init.lua , size = 3.028 KB
+[07:35:26.741][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.741][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/pkg/init.lua
+[07:35:26.741][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/pkg/rockspec.lua , size = 8.005 KB
+[07:35:26.743][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.743][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/pkg/rockspec.lua
+[07:35:26.743][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/pkg/lazy.lua , size = 0.720 KB
+[07:35:26.744][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.744][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/pkg/lazy.lua
+[07:35:26.744][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/example.lua , size = 2.644 KB
+[07:35:26.744][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy
+[07:35:26.744][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/lazy.nvim/lua/lazy/example.lua
+[07:35:26.744][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/ui/nvchad_types/keymaps.lua , size = 1.461 KB
+[07:35:26.745][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/ui/nvchad_types
+[07:35:26.745][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/ui/nvchad_types/keymaps.lua
+[07:35:26.745][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/ui/nvchad_types/themes.lua , size = 4.774 KB
+[07:35:26.746][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/ui/nvchad_types
+[07:35:26.746][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/ui/nvchad_types/themes.lua
+[07:35:26.746][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/ui/nvchad_types/base46.lua , size = 7.725 KB
+[07:35:26.748][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/ui/nvchad_types
+[07:35:26.748][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/ui/nvchad_types/base46.lua
+[07:35:26.748][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/ui/nvchad_types/plugins.lua , size = 5.782 KB
+[07:35:26.749][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/ui/nvchad_types
+[07:35:26.749][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/ui/nvchad_types/plugins.lua
+[07:35:26.749][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/ui/nvchad_types/all_hl_groups.lua , size = 40.871 KB
+[07:35:26.757][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/ui/nvchad_types
+[07:35:26.757][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/lazy/ui/nvchad_types/chadrc.lua , size = 8.765 KB
+[07:35:26.759][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/lazy/ui/nvchad_types
+[07:35:26.759][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/ui/nvchad_types/all_hl_groups.lua
+[07:35:26.759][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/lazy/ui/nvchad_types/chadrc.lua
+[07:35:26.759][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/os.lua , size = 5.600 KB
+[07:35:26.760][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/os.lua
+[07:35:26.760][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/os.lua
+[07:35:26.760][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_meta.lua
+[07:35:26.760][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.760][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/table.lua , size = 4.445 KB
+[07:35:26.762][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/table.lua
+[07:35:26.762][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/table.lua
+[07:35:26.762][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/debug.lua , size = 7.637 KB
+[07:35:26.764][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/debug.lua
+[07:35:26.764][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/debug.lua
+[07:35:26.764][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/utf8.lua , size = 2.386 KB
+[07:35:26.765][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/utf8.lua
+[07:35:26.765][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/hanbo/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/utf8.lua
+[07:35:26.765][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_meta.lua
+[07:35:26.765][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.765][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/diagnostic.lua
+[07:35:26.765][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.765][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/diagnostic.lua
+[07:35:26.765][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.765][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/protocol.lua
+[07:35:26.765][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.765][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/protocol.lua
+[07:35:26.765][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.765][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_snippet_grammar.lua
+[07:35:26.765][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.765][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_snippet_grammar.lua
+[07:35:26.765][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.765][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/health.lua
+[07:35:26.765][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.765][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/health.lua
+[07:35:26.765][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.765][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/codelens.lua
+[07:35:26.765][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.765][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/codelens.lua
+[07:35:26.765][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.765][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_meta/protocol.lua
+[07:35:26.765][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.765][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_meta/protocol.lua
+[07:35:26.765][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.765][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_changetracking.lua
+[07:35:26.765][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.765][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_changetracking.lua
+[07:35:26.765][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.765][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_dynamic.lua
+[07:35:26.765][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.765][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_dynamic.lua
+[07:35:26.765][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.765][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_watchfiles.lua
+[07:35:26.766][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.766][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_watchfiles.lua
+[07:35:26.766][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.766][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/sync.lua
+[07:35:26.766][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.766][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/sync.lua
+[07:35:26.766][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.766][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_completion.lua
+[07:35:26.766][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.766][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_completion.lua
+[07:35:26.766][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.766][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/log.lua
+[07:35:26.766][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.766][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/log.lua
+[07:35:26.766][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.766][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/util.lua
+[07:35:26.766][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.766][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/util.lua
+[07:35:26.766][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.766][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/buf.lua
+[07:35:26.766][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.766][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/buf.lua
+[07:35:26.766][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.766][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/handlers.lua
+[07:35:26.766][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.766][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/handlers.lua
+[07:35:26.766][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.766][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/inlay_hint.lua
+[07:35:26.766][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.766][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/inlay_hint.lua
+[07:35:26.766][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.766][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_tagfunc.lua
+[07:35:26.766][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.766][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/_tagfunc.lua
+[07:35:26.766][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.766][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/rpc.lua
+[07:35:26.766][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.766][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/rpc.lua
+[07:35:26.766][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.766][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/semantic_tokens.lua
+[07:35:26.766][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.766][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/semantic_tokens.lua
+[07:35:26.766][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.766][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/client.lua
+[07:35:26.766][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.766][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp/client.lua
+[07:35:26.766][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime/lua/vim/lsp
+[07:35:26.766][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.785] sec: <fallback>
+[07:35:26.766][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: <fallback>
+[07:35:26.766][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	<fallback>
+[07:35:26.766][info] [#0:script/workspace/workspace.lua:381]: Preload finish at:	<fallback>
+[07:35:26.784][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.config/nvim/init.lua , size = 0.500 KB
+[07:35:26.784][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.config/nvim/lua/core/init.lua , size = 4.302 KB
+[07:35:26.785][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.config/nvim/lua/core/bootstrap.lua , size = 1.472 KB
+[07:35:26.786][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.config/nvim/lua/core/mappings.lua , size = 10.292 KB
+[07:35:26.788][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.config/nvim/lua/core/utils.lua , size = 3.455 KB
+[07:35:26.789][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.config/nvim/lua/core/default_config.lua , size = 3.102 KB
+[07:35:26.790][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.config/nvim/lua/plugins/init.lua , size = 6.448 KB
+[07:35:26.792][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.config/nvim/lua/plugins/configs/lspconfig.lua , size = 1.691 KB
+[07:35:26.792][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.config/nvim/lua/plugins/configs/telescope.lua , size = 1.598 KB
+[07:35:26.893][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.config/nvim/lua/plugins/configs/lazy_nvim.lua , size = 0.822 KB
+[07:35:26.893][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.config/nvim/lua/plugins/configs/others.lua , size = 1.620 KB
+[07:35:26.894][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.config/nvim/lua/plugins/configs/cmp.lua , size = 3.064 KB
+[07:35:26.896][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.config/nvim/lua/plugins/configs/nvimtree.lua , size = 1.479 KB
+[07:35:26.896][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.config/nvim/lua/plugins/configs/treesitter.lua , size = 0.182 KB
+[07:35:26.897][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/hanbo/.config/nvim/lua/plugins/configs/mason.lua , size = 0.581 KB
+[07:35:27.002][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.817] sec: file:///Users/hanbo/.config/nvim
+[07:35:27.002][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: file:///Users/hanbo/.config/nvim
+[07:35:27.002][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	file:///Users/hanbo/.config/nvim
+[07:35:27.002][info] [#0:script/workspace/workspace.lua:381]: Preload finish at:	file:///Users/hanbo/.config/nvim
+[07:35:27.043][warn] [#0:script/proto/proto.lua:189]: Method [textDocument/didOpen] takes [0.923]sec. {
+  jsonrpc = "2.0",
+  method = "textDocument/didOpen",
+  params = {
+    textDocument = {
+      languageId = "lua",
+      text = '"***"',
+      uri = "file:///Users/hanbo/.config/nvim/lua/custom/chadrc.lua",
+      version = 0
+    }
+  }
+}
+[07:35:27.043][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/hanbo/.config/nvim], files count:[187]
+[07:35:27.234][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/hanbo/.config/nvim] finished, takes [0.191] sec.
+[07:45:25.368][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.592 MB
+        # 00 : 142.005 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[07:55:25.517][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.596 MB
+        # 00 : 142.010 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[08:05:25.600][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.600 MB
+        # 00 : 142.014 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[08:15:25.606][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.604 MB
+        # 00 : 142.018 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[08:25:25.908][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.608 MB
+        # 00 : 142.021 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[08:35:26.125][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.611 MB
+        # 00 : 142.025 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[08:45:26.166][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.615 MB
+        # 00 : 142.029 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[08:55:26.229][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.619 MB
+        # 00 : 142.033 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[09:18:40.524][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.623 MB
+        # 00 : 142.037 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[09:34:49.388][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.627 MB
+        # 00 : 142.041 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[09:51:01.555][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.631 MB
+        # 00 : 142.045 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[10:09:57.617][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.634 MB
+        # 00 : 142.048 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[10:26:05.847][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.638 MB
+        # 00 : 142.052 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[10:42:04.559][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.642 MB
+        # 00 : 142.056 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[10:58:14.276][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.646 MB
+        # 00 : 142.060 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[11:17:19.545][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.650 MB
+        # 00 : 142.064 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[11:33:27.799][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.654 MB
+        # 00 : 142.068 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[11:49:53.655][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.658 MB
+        # 00 : 142.071 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[12:02:55.243][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.661 MB
+        # 00 : 142.075 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[12:21:52.703][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.665 MB
+        # 00 : 142.079 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[12:38:03.052][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.669 MB
+        # 00 : 142.083 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[12:54:12.905][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.673 MB
+        # 00 : 142.087 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[13:04:12.965][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.677 MB
+        # 00 : 142.091 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[13:20:02.836][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.681 MB
+        # 00 : 142.095 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[13:34:42.679][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.685 MB
+        # 00 : 142.098 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[13:51:15.449][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.688 MB
+        # 00 : 142.102 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[14:04:54.944][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.692 MB
+        # 00 : 142.106 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[14:21:02.094][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.696 MB
+        # 00 : 142.110 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[14:37:01.558][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.700 MB
+        # 00 : 142.114 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[14:53:10.490][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.704 MB
+        # 00 : 142.118 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[15:05:54.905][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.708 MB
+        # 00 : 142.122 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[15:25:00.324][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.711 MB
+        # 00 : 142.125 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[15:40:35.826][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.715 MB
+        # 00 : 142.129 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[15:56:46.240][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.719 MB
+        # 00 : 142.133 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[16:06:54.705][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.723 MB
+        # 00 : 142.137 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[16:23:03.393][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.727 MB
+        # 00 : 142.141 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[16:39:10.423][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.731 MB
+        # 00 : 142.145 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[16:55:19.872][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.735 MB
+        # 00 : 142.148 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[17:07:54.649][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.738 MB
+        # 00 : 142.152 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[17:24:03.726][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.742 MB
+        # 00 : 142.156 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[17:44:21.980][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.746 MB
+        # 00 : 142.160 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[18:00:30.405][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.750 MB
+        # 00 : 142.164 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[18:25:02.389][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.754 MB
+        # 00 : 142.168 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[18:40:51.733][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.758 MB
+        # 00 : 142.172 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[18:56:42.930][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.761 MB
+        # 00 : 142.175 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[19:09:54.558][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.765 MB
+        # 00 : 142.179 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[19:26:07.733][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.769 MB
+        # 00 : 142.183 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[19:42:15.759][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.773 MB
+        # 00 : 142.187 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[19:58:24.073][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.777 MB
+        # 00 : 142.191 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[20:10:54.530][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.781 MB
+        # 00 : 142.195 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[20:27:16.661][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.785 MB
+        # 00 : 142.198 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[20:37:16.838][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.788 MB
+        # 00 : 142.202 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[20:47:16.957][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.792 MB
+        # 00 : 142.206 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[20:57:17.257][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.796 MB
+        # 00 : 142.210 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[21:07:17.510][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.800 MB
+        # 00 : 142.214 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[21:17:17.655][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.804 MB
+        # 00 : 142.218 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[21:27:17.748][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.808 MB
+        # 00 : 142.222 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[21:37:17.819][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.812 MB
+        # 00 : 142.225 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[21:47:17.903][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.815 MB
+        # 00 : 142.229 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[21:57:17.915][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.819 MB
+        # 00 : 142.233 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[22:07:18.013][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 142.823 MB
+        # 00 : 142.237 MB
+        # 01 : 0.053 MB
+        # 02 : 0.053 MB
+        # 03 : 0.270 MB
+        # 04 : 0.210 MB
+    --------------- Coroutine ---------------
+        Total:     176
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      176
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
