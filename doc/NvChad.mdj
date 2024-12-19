@@ -5,294 +5,6 @@
 	"ownedElements": [
 		{
 			"_type": "UMLPackage",
-			"_id": "AAAAAAGN+JcqGwF9/RQ=",
-			"_parent": {
-				"$ref": "AAAAAAFF+h6SjaM2Hec="
-			},
-			"name": "NvChad",
-			"ownedElements": [
-				{
-					"_type": "UMLPackage",
-					"_id": "AAAAAAGN+JgaYAGJ2Z8=",
-					"_parent": {
-						"$ref": "AAAAAAGN+JcqGwF9/RQ="
-					},
-					"name": "core",
-					"ownedElements": [
-						{
-							"_type": "UMLClass",
-							"_id": "AAAAAAGN+JpylQJtEcI=",
-							"_parent": {
-								"$ref": "AAAAAAGN+JgaYAGJ2Z8="
-							},
-							"name": "init.lua"
-						},
-						{
-							"_type": "UMLClass",
-							"_id": "AAAAAAGN+JpAtQIZ3kw=",
-							"_parent": {
-								"$ref": "AAAAAAGN+JgaYAGJ2Z8="
-							},
-							"name": "bootstrap.lua",
-							"operations": [
-								{
-									"_type": "UMLOperation",
-									"_id": "AAAAAAGN+J3cSwV+sW4=",
-									"_parent": {
-										"$ref": "AAAAAAGN+JpAtQIZ3kw="
-									},
-									"name": "echo",
-									"documentation": "调用M.echo()，会清除屏幕后，加粗显示str变量中的内容",
-									"parameters": [
-										{
-											"_type": "UMLParameter",
-											"_id": "AAAAAAGN+J61NAWHOIE=",
-											"_parent": {
-												"$ref": "AAAAAAGN+J3cSwV+sW4="
-											},
-											"name": "str",
-											"type": ""
-										}
-									]
-								},
-								{
-									"_type": "UMLOperation",
-									"_id": "AAAAAAGN+J7bZwWJYlg=",
-									"_parent": {
-										"$ref": "AAAAAAGN+JpAtQIZ3kw="
-									},
-									"name": "shell_call",
-									"documentation": "自定义local shell_call()的Lua函数，用于在NeoVim中执行系统命令并检查是否成功。",
-									"parameters": [
-										{
-											"_type": "UMLParameter",
-											"_id": "AAAAAAGN+J8C8wWQjgU=",
-											"_parent": {
-												"$ref": "AAAAAAGN+J7bZwWJYlg="
-											},
-											"name": "args",
-											"documentation": "用于在Neovim中执行系统命令，并检查是否调用成功。",
-											"type": ""
-										}
-									]
-								},
-								{
-									"_type": "UMLOperation",
-									"_id": "AAAAAAGN+J/dowWTQB4=",
-									"_parent": {
-										"$ref": "AAAAAAGN+JpAtQIZ3kw="
-									},
-									"name": "lazy",
-									"parameters": [
-										{
-											"_type": "UMLParameter",
-											"_id": "AAAAAAGN+KAEowWaB3E=",
-											"_parent": {
-												"$ref": "AAAAAAGN+J/dowWTQB4="
-											},
-											"name": "install_path",
-											"type": ""
-										}
-									]
-								},
-								{
-									"_type": "UMLOperation",
-									"_id": "AAAAAAGN+KCR4wWc4Ts=",
-									"_parent": {
-										"$ref": "AAAAAAGN+JpAtQIZ3kw="
-									},
-									"name": "gen_chadrc_template",
-									"documentation": "用于生成Neovim的自定义配置文件模板。\n自定义配置文件模板的文件路径为：~/.config/nvim/lua/custom\n\n会提示是否安装示例自定义配置。\n如果输入y，则从https://github.cvom/NvChad/example_config中下载。\n如果输入其它，则只创建一个~/.config/nvim/lua/custom/chadrc.lua文件，里面写一句话：“---@type ChadrcConfig\\nlocal M = {}\\n\\nM.ui = { theme = 'onedark' }\\n\\nreturn M”"
-								}
-							]
-						},
-						{
-							"_type": "UMLClass",
-							"_id": "AAAAAAGN+JpbJwJDD0g=",
-							"_parent": {
-								"$ref": "AAAAAAGN+JgaYAGJ2Z8="
-							},
-							"name": "default_config.lua",
-							"documentation": "这里是neovim插件默认配置的地方，不建议在这里做任何修改。"
-						},
-						{
-							"_type": "UMLClass",
-							"_id": "AAAAAAGN+JqEqgKXaf8=",
-							"_parent": {
-								"$ref": "AAAAAAGN+JgaYAGJ2Z8="
-							},
-							"name": "mappings.lua"
-						},
-						{
-							"_type": "UMLClass",
-							"_id": "AAAAAAGN+Jqg1ALCpAY=",
-							"_parent": {
-								"$ref": "AAAAAAGN+JgaYAGJ2Z8="
-							},
-							"name": "utils.lua",
-							"operations": [
-								{
-									"_type": "UMLOperation",
-									"_id": "AAAAAAGT10L3yoA4ZZg=",
-									"_parent": {
-										"$ref": "AAAAAAGN+Jqg1ALCpAY="
-									},
-									"name": "load_config",
-									"documentation": "这里是用来加载Neovim的配置。\n文件来源有两处：\n\n1. lua/core/default_config.lua\n2. lua/custom/chadrc.lua\n\n会将这两处的内容进行merge，然后返回给neovim。"
-								},
-								{
-									"_type": "UMLOperation",
-									"_id": "AAAAAAGT10V9IoBD9Xc=",
-									"_parent": {
-										"$ref": "AAAAAAGN+Jqg1ALCpAY="
-									},
-									"name": "remove_disabled_keys"
-								}
-							]
-						}
-					],
-					"documentation": "核心模块中的代码不建议私自更改。\n针对客制化的使用配置方面的调整，都可以在lua/custom/下实现。"
-				},
-				{
-					"_type": "UMLPackage",
-					"_id": "AAAAAAGN+JihIQGNkOI=",
-					"_parent": {
-						"$ref": "AAAAAAGN+JcqGwF9/RQ="
-					},
-					"name": "plugins",
-					"ownedElements": [
-						{
-							"_type": "UMLPackage",
-							"_id": "AAAAAAGN+JjLMAGR1f4=",
-							"_parent": {
-								"$ref": "AAAAAAGN+JihIQGNkOI="
-							},
-							"name": "configs",
-							"ownedElements": [
-								{
-									"_type": "UMLClass",
-									"_id": "AAAAAAGN+JweyAPorr4=",
-									"_parent": {
-										"$ref": "AAAAAAGN+JjLMAGR1f4="
-									},
-									"name": "cmp.lua"
-								},
-								{
-									"_type": "UMLClass",
-									"_id": "AAAAAAGN+Jw0MwQqMFQ=",
-									"_parent": {
-										"$ref": "AAAAAAGN+JjLMAGR1f4="
-									},
-									"name": "lazy_nvim.lua"
-								},
-								{
-									"_type": "UMLClass",
-									"_id": "AAAAAAGN+JxQSARUY8g=",
-									"_parent": {
-										"$ref": "AAAAAAGN+JjLMAGR1f4="
-									},
-									"name": "lspconfig.lua"
-								},
-								{
-									"_type": "UMLClass",
-									"_id": "AAAAAAGN+JxnUQR+Qxw=",
-									"_parent": {
-										"$ref": "AAAAAAGN+JjLMAGR1f4="
-									},
-									"name": "mason.lua"
-								},
-								{
-									"_type": "UMLClass",
-									"_id": "AAAAAAGN+Jx7PgSojyc=",
-									"_parent": {
-										"$ref": "AAAAAAGN+JjLMAGR1f4="
-									},
-									"name": "nvimtree.lua"
-								},
-								{
-									"_type": "UMLClass",
-									"_id": "AAAAAAGN+JzU/AVL6Zw=",
-									"_parent": {
-										"$ref": "AAAAAAGN+JjLMAGR1f4="
-									},
-									"name": "others.lua"
-								},
-								{
-									"_type": "UMLClass",
-									"_id": "AAAAAAGN+Jz7jwVPvpI=",
-									"_parent": {
-										"$ref": "AAAAAAGN+JjLMAGR1f4="
-									},
-									"name": "telescope.lua"
-								},
-								{
-									"_type": "UMLClass",
-									"_id": "AAAAAAGN+J0loQVTM6E=",
-									"_parent": {
-										"$ref": "AAAAAAGN+JjLMAGR1f4="
-									},
-									"name": "treesitter.lua"
-								}
-							]
-						},
-						{
-							"_type": "UMLClass",
-							"_id": "AAAAAAGN+JvxrQO9IW4=",
-							"_parent": {
-								"$ref": "AAAAAAGN+JihIQGNkOI="
-							},
-							"name": "init.lua"
-						}
-					]
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAGN+JmR7AGbFLg=",
-					"_parent": {
-						"$ref": "AAAAAAGN+JcqGwF9/RQ="
-					},
-					"name": "init.lua"
-				},
-				{
-					"_type": "UMLPackage",
-					"_id": "AAAAAAGT1rNeHjstJIQ=",
-					"_parent": {
-						"$ref": "AAAAAAGN+JcqGwF9/RQ="
-					},
-					"name": "custom",
-					"ownedElements": [
-						{
-							"_type": "UMLClass",
-							"_id": "AAAAAAGT1sPO+zv0HNY=",
-							"_parent": {
-								"$ref": "AAAAAAGT1rNeHjstJIQ="
-							},
-							"name": "mappings"
-						},
-						{
-							"_type": "UMLClass",
-							"_id": "AAAAAAGT1t8/Kj5kIwc=",
-							"_parent": {
-								"$ref": "AAAAAAGT1rNeHjstJIQ="
-							},
-							"name": "plugins"
-						},
-						{
-							"_type": "UMLClass",
-							"_id": "AAAAAAGT1w17un5kJng=",
-							"_parent": {
-								"$ref": "AAAAAAGT1rNeHjstJIQ="
-							},
-							"name": "chadrc"
-						}
-					],
-					"documentation": "lua/custom目录下是一些客制化的配置内容"
-				}
-			],
-			"documentation": "存放在~/.config/nvim中。"
-		},
-		{
-			"_type": "UMLPackage",
 			"_id": "AAAAAAGT1rSmATto1D0=",
 			"_parent": {
 				"$ref": "AAAAAAFF+h6SjaM2Hec="
@@ -713,7 +425,7 @@
 															"font": "Arial;13;0",
 															"parentStyle": true,
 															"left": 320,
-															"width": 129.27001953125,
+															"width": 132.31396484375,
 															"height": 13,
 															"text": "(from 软件启动活动图)"
 														},
@@ -919,7 +631,7 @@
 															"parentStyle": true,
 															"left": 1166,
 															"top": -64,
-															"width": 129.27001953125,
+															"width": 132.31396484375,
 															"height": 13,
 															"text": "(from 软件启动活动图)"
 														},
@@ -1126,7 +838,7 @@
 															"parentStyle": true,
 															"left": 304,
 															"top": 16,
-															"width": 129.27001953125,
+															"width": 132.31396484375,
 															"height": 13,
 															"text": "(from 软件启动活动图)"
 														},
@@ -1431,7 +1143,7 @@
 															"parentStyle": true,
 															"left": 336,
 															"top": 80,
-															"width": 129.27001953125,
+															"width": 132.31396484375,
 															"height": 13,
 															"text": "(from 软件启动活动图)"
 														},
@@ -1635,7 +1347,7 @@
 															"font": "Arial;13;0",
 															"parentStyle": true,
 															"left": 832,
-															"width": 129.27001953125,
+															"width": 132.31396484375,
 															"height": 13,
 															"text": "(from 软件启动活动图)"
 														},
@@ -1974,7 +1686,7 @@
 															"parentStyle": true,
 															"left": 160,
 															"top": 96,
-															"width": 129.27001953125,
+															"width": 132.31396484375,
 															"height": 13,
 															"text": "(from 软件启动活动图)"
 														},
@@ -2180,7 +1892,7 @@
 															"parentStyle": true,
 															"left": -208,
 															"top": 80,
-															"width": 129.27001953125,
+															"width": 132.31396484375,
 															"height": 13,
 															"text": "(from 软件启动活动图)"
 														},
@@ -2387,7 +2099,7 @@
 															"parentStyle": true,
 															"left": 16,
 															"top": 80,
-															"width": 129.27001953125,
+															"width": 132.31396484375,
 															"height": 13,
 															"text": "(from 软件启动活动图)"
 														},
@@ -2691,7 +2403,7 @@
 															"parentStyle": true,
 															"left": 16,
 															"top": 80,
-															"width": 129.27001953125,
+															"width": 132.31396484375,
 															"height": 13,
 															"text": "(from 软件启动活动图)"
 														},
@@ -3101,7 +2813,7 @@
 													},
 													"font": "Arial;13;0",
 													"parentStyle": true,
-													"left": 157.39453125,
+													"left": 156.6189727783203,
 													"top": 269,
 													"width": 78,
 													"height": 13,
@@ -3117,7 +2829,7 @@
 													"parentStyle": true,
 													"left": 125,
 													"top": 269,
-													"width": 22.39453125,
+													"width": 21.618972778320312,
 													"height": 13,
 													"text": "link"
 												}
@@ -3153,9 +2865,9 @@
 													},
 													"font": "Arial;13;0",
 													"parentStyle": true,
-													"left": 197.39453125,
+													"left": 196.6189727783203,
 													"top": 741,
-													"width": 93.1962890625,
+													"width": 94.79595947265625,
 													"height": 13,
 													"text": "加载plugins模块"
 												},
@@ -3169,7 +2881,7 @@
 													"parentStyle": true,
 													"left": 165,
 													"top": 741,
-													"width": 22.39453125,
+													"width": 21.618972778320312,
 													"height": 13,
 													"text": "link"
 												}
@@ -3178,7 +2890,7 @@
 											"parentStyle": false,
 											"left": 160,
 											"top": 736,
-											"width": 135.5908203125,
+											"width": 137.19049072265625,
 											"height": 23,
 											"nameLabel": {
 												"$ref": "AAAAAAGT3DfXFIFkB54="
@@ -3592,7 +3304,7 @@
 																	"parentStyle": false,
 																	"left": 296,
 																	"top": 48,
-																	"width": 200.76611328125,
+																	"width": 212.08485412597656,
 																	"height": 25,
 																	"text": "调用lua/core/utils.load_mappings"
 																},
@@ -3722,7 +3434,7 @@
 																			},
 																			"font": "Arial;13;0",
 																			"parentStyle": true,
-																			"left": 383.39453125,
+																			"left": 382.6189727783203,
 																			"top": 229,
 																			"width": 52,
 																			"height": 13,
@@ -3738,7 +3450,7 @@
 																			"parentStyle": true,
 																			"left": 351,
 																			"top": 229,
-																			"width": 22.39453125,
+																			"width": 21.618972778320312,
 																			"height": 13,
 																			"text": "link"
 																		}
@@ -3814,7 +3526,7 @@
 																					"parentStyle": true,
 																					"left": -176,
 																					"top": 272,
-																					"width": 116.27001953125,
+																					"width": 119.31396484375,
 																					"height": 13,
 																					"text": "(from 加载键盘映射)"
 																				},
@@ -4133,7 +3845,7 @@
 																					"font": "Arial;13;0",
 																					"parentStyle": true,
 																					"left": -64,
-																					"width": 116.27001953125,
+																					"width": 119.31396484375,
 																					"height": 13,
 																					"text": "(from 加载键盘映射)"
 																				},
@@ -4544,7 +4256,7 @@
 																	"parentStyle": false,
 																	"left": 320,
 																	"top": 48,
-																	"width": 179.0888671875,
+																	"width": 191.20687866210938,
 																	"height": 25,
 																	"text": "调用lua/core/utils.load_config"
 																},
@@ -4604,7 +4316,7 @@
 																					"font": "Arial;13;0",
 																					"parentStyle": true,
 																					"left": -16,
-																					"width": 86.6708984375,
+																					"width": 90.77888488769531,
 																					"height": 13,
 																					"text": "(from Activity1)"
 																				},
@@ -4809,7 +4521,7 @@
 																					"parentStyle": true,
 																					"left": -40,
 																					"top": -16,
-																					"width": 86.6708984375,
+																					"width": 90.77888488769531,
 																					"height": 13,
 																					"text": "(from Activity1)"
 																				},
@@ -5131,7 +4843,7 @@
 																					"parentStyle": true,
 																					"left": -80,
 																					"top": 16,
-																					"width": 86.6708984375,
+																					"width": 90.77888488769531,
 																					"height": 13,
 																					"text": "(from Activity1)"
 																				},
@@ -5338,7 +5050,7 @@
 																					"parentStyle": true,
 																					"left": -160,
 																					"top": 48,
-																					"width": 86.6708984375,
+																					"width": 90.77888488769531,
 																					"height": 13,
 																					"text": "(from Activity1)"
 																				},
@@ -5540,7 +5252,7 @@
 																					"visible": false,
 																					"font": "Arial;13;0",
 																					"parentStyle": true,
-																					"width": 86.6708984375,
+																					"width": 90.77888488769531,
 																					"height": 13,
 																					"text": "(from Activity1)"
 																				},
@@ -5724,9 +5436,9 @@
 																			},
 																			"font": "Arial;13;0",
 																			"parentStyle": false,
-																			"left": 322,
+																			"left": 321,
 																			"top": 535,
-																			"width": 60.68994140625,
+																			"width": 63.582977294921875,
 																			"height": 13,
 																			"alpha": 1.1473985069585553,
 																			"distance": 56.639209034025185,
@@ -5823,9 +5535,9 @@
 																			},
 																			"font": "Arial;13;0",
 																			"parentStyle": false,
-																			"left": 496,
+																			"left": 495,
 																			"top": 304,
-																			"width": 266.55078125,
+																			"width": 269.3079528808594,
 																			"height": 13,
 																			"alpha": 3.10507904106878,
 																			"distance": 98.00510190801293,
@@ -6185,7 +5897,7 @@
 																	"visible": false,
 																	"font": "Arial;13;0",
 																	"parentStyle": true,
-																	"width": 131.46630859375,
+																	"width": 136.10992431640625,
 																	"height": 13,
 																	"text": "(from 加载plugins模块)"
 																},
@@ -6254,9 +5966,9 @@
 															},
 															"font": "Arial;13;0",
 															"parentStyle": false,
-															"left": 556,
+															"left": 553,
 															"top": 71,
-															"width": 94.50390625,
+															"width": 100.37290954589844,
 															"height": 13,
 															"alpha": 1.358925344717601,
 															"distance": 56.22277118748239,
@@ -6438,7 +6150,7 @@
 																	"visible": false,
 																	"font": "Arial;13;0",
 																	"parentStyle": true,
-																	"width": 131.46630859375,
+																	"width": 136.10992431640625,
 																	"height": 13,
 																	"text": "(from 加载plugins模块)"
 																},
@@ -6623,9 +6335,9 @@
 															},
 															"font": "Arial;13;0",
 															"parentStyle": false,
-															"left": 484,
+															"left": 482,
 															"top": 237,
-															"width": 157.498046875,
+															"width": 161.81092834472656,
 															"height": 13,
 															"alpha": 1.5707963267948966,
 															"distance": 15,
@@ -6755,7 +6467,7 @@
 																	"visible": false,
 																	"font": "Arial;13;0",
 																	"parentStyle": true,
-																	"width": 131.46630859375,
+																	"width": 136.10992431640625,
 																	"height": 13,
 																	"text": "(from 加载plugins模块)"
 																},
@@ -6956,7 +6668,7 @@
 																	"visible": false,
 																	"font": "Arial;13;0",
 																	"parentStyle": true,
-																	"width": 131.46630859375,
+																	"width": 136.10992431640625,
 																	"height": 13,
 																	"text": "(from 加载plugins模块)"
 																},
@@ -7315,6 +7027,58 @@
 													"propertyLabel": {
 														"$ref": "AAAAAAGT3EfUrIKO+As="
 													}
+												},
+												{
+													"_type": "HyperlinkView",
+													"_id": "AAAAAAGT3GLQQQUo7fE=",
+													"_parent": {
+														"$ref": "AAAAAAGT3DbZ54Fbse8="
+													},
+													"model": {
+														"$ref": "AAAAAAGT3GLQQAUmajs="
+													},
+													"subViews": [
+														{
+															"_type": "LabelView",
+															"_id": "AAAAAAGT3GLQQQUpEMQ=",
+															"_parent": {
+																"$ref": "AAAAAAGT3GLQQQUo7fE="
+															},
+															"font": "Arial;13;0",
+															"parentStyle": true,
+															"left": 221.39453125,
+															"top": 437,
+															"width": 97.525390625,
+															"height": 13,
+															"text": "ActivityDiagram1"
+														},
+														{
+															"_type": "LabelView",
+															"_id": "AAAAAAGT3GLQQQUq0G4=",
+															"_parent": {
+																"$ref": "AAAAAAGT3GLQQQUo7fE="
+															},
+															"font": "Arial;13;1",
+															"parentStyle": true,
+															"left": 189,
+															"top": 437,
+															"width": 22.39453125,
+															"height": 13,
+															"text": "link"
+														}
+													],
+													"font": "Arial;13;0",
+													"parentStyle": false,
+													"left": 184,
+													"top": 432,
+													"width": 139.919921875,
+													"height": 23,
+													"nameLabel": {
+														"$ref": "AAAAAAGT3GLQQQUpEMQ="
+													},
+													"typeLabel": {
+														"$ref": "AAAAAAGT3GLQQQUq0G4="
+													}
 												}
 											]
 										},
@@ -7327,6 +7091,17 @@
 											"name": "Hyperlink1",
 											"reference": {
 												"$ref": "AAAAAAGT1yk2YH9Hn1w="
+											}
+										},
+										{
+											"_type": "Hyperlink",
+											"_id": "AAAAAAGT3GLQQAUmajs=",
+											"_parent": {
+												"$ref": "AAAAAAGT3DbZ54FanM8="
+											},
+											"name": "Hyperlink2",
+											"reference": {
+												"$ref": "AAAAAAGT3GEueoLkGn8="
 											}
 										}
 									],
@@ -7487,6 +7262,648 @@
 											"target": {
 												"$ref": "AAAAAAGT3EbKYYJsRMs="
 											}
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"_type": "UMLPackage",
+					"_id": "AAAAAAGT3GCTp4Lbz00=",
+					"_parent": {
+						"$ref": "AAAAAAGT1rSmATto1D0="
+					},
+					"name": "lazy",
+					"ownedElements": [
+						{
+							"_type": "UMLPackage",
+							"_id": "AAAAAAGT3GDRq4LfzRc=",
+							"_parent": {
+								"$ref": "AAAAAAGT3GCTp4Lbz00="
+							},
+							"name": "lazy/init.setup",
+							"ownedElements": [
+								{
+									"_type": "UMLActivity",
+									"_id": "AAAAAAGT3GEueoLjygQ=",
+									"_parent": {
+										"$ref": "AAAAAAGT3GDRq4LfzRc="
+									},
+									"name": "Activity1",
+									"ownedElements": [
+										{
+											"_type": "UMLActivityDiagram",
+											"_id": "AAAAAAGT3GEueoLkGn8=",
+											"_parent": {
+												"$ref": "AAAAAAGT3GEueoLjygQ="
+											},
+											"name": "ActivityDiagram1",
+											"ownedViews": [
+												{
+													"_type": "UMLControlNodeView",
+													"_id": "AAAAAAGT3GHIJoLqGK0=",
+													"_parent": {
+														"$ref": "AAAAAAGT3GEueoLkGn8="
+													},
+													"model": {
+														"$ref": "AAAAAAGT3GHIJoLoMG0="
+													},
+													"font": "Arial;13;0",
+													"parentStyle": false,
+													"containerChangeable": true,
+													"left": 280,
+													"top": 32,
+													"width": 20,
+													"height": 20
+												},
+												{
+													"_type": "UMLActionView",
+													"_id": "AAAAAAGT3GHZSYLvNVY=",
+													"_parent": {
+														"$ref": "AAAAAAGT3GEueoLkGn8="
+													},
+													"model": {
+														"$ref": "AAAAAAGT3GHZSILtzuQ="
+													},
+													"subViews": [
+														{
+															"_type": "UMLNameCompartmentView",
+															"_id": "AAAAAAGT3GHZSYLwj2g=",
+															"_parent": {
+																"$ref": "AAAAAAGT3GHZSYLvNVY="
+															},
+															"model": {
+																"$ref": "AAAAAAGT3GHZSILtzuQ="
+															},
+															"subViews": [
+																{
+																	"_type": "LabelView",
+																	"_id": "AAAAAAGT3GHZSYLxKb8=",
+																	"_parent": {
+																		"$ref": "AAAAAAGT3GHZSYLwj2g="
+																	},
+																	"visible": false,
+																	"font": "Arial;13;0",
+																	"parentStyle": true,
+																	"height": 13
+																},
+																{
+																	"_type": "LabelView",
+																	"_id": "AAAAAAGT3GHZSYLyIUk=",
+																	"_parent": {
+																		"$ref": "AAAAAAGT3GHZSYLwj2g="
+																	},
+																	"font": "Arial;13;1",
+																	"parentStyle": true,
+																	"left": 261,
+																	"top": 111,
+																	"width": 51,
+																	"height": 13,
+																	"text": "Action1"
+																},
+																{
+																	"_type": "LabelView",
+																	"_id": "AAAAAAGT3GHZSYLzhuA=",
+																	"_parent": {
+																		"$ref": "AAAAAAGT3GHZSYLwj2g="
+																	},
+																	"visible": false,
+																	"font": "Arial;13;0",
+																	"parentStyle": true,
+																	"width": 90.77888488769531,
+																	"height": 13,
+																	"text": "(from Activity1)"
+																},
+																{
+																	"_type": "LabelView",
+																	"_id": "AAAAAAGT3GHZSYL0M8k=",
+																	"_parent": {
+																		"$ref": "AAAAAAGT3GHZSYLwj2g="
+																	},
+																	"visible": false,
+																	"font": "Arial;13;0",
+																	"parentStyle": true,
+																	"height": 13,
+																	"horizontalAlignment": 1
+																}
+															],
+															"font": "Arial;13;0",
+															"parentStyle": true,
+															"left": 256,
+															"top": 104,
+															"width": 61,
+															"height": 25,
+															"stereotypeLabel": {
+																"$ref": "AAAAAAGT3GHZSYLxKb8="
+															},
+															"nameLabel": {
+																"$ref": "AAAAAAGT3GHZSYLyIUk="
+															},
+															"namespaceLabel": {
+																"$ref": "AAAAAAGT3GHZSYLzhuA="
+															},
+															"propertyLabel": {
+																"$ref": "AAAAAAGT3GHZSYL0M8k="
+															}
+														}
+													],
+													"font": "Arial;13;0",
+													"parentStyle": false,
+													"containerChangeable": true,
+													"left": 256,
+													"top": 104,
+													"width": 60,
+													"height": 41,
+													"nameCompartment": {
+														"$ref": "AAAAAAGT3GHZSYLwj2g="
+													}
+												},
+												{
+													"_type": "UMLControlFlowView",
+													"_id": "AAAAAAGT3GHpLoMHMRg=",
+													"_parent": {
+														"$ref": "AAAAAAGT3GEueoLkGn8="
+													},
+													"model": {
+														"$ref": "AAAAAAGT3GHpLoMGPOA="
+													},
+													"subViews": [
+														{
+															"_type": "EdgeLabelView",
+															"_id": "AAAAAAGT3GHpLoMIfck=",
+															"_parent": {
+																"$ref": "AAAAAAGT3GHpLoMHMRg="
+															},
+															"model": {
+																"$ref": "AAAAAAGT3GHpLoMGPOA="
+															},
+															"visible": false,
+															"font": "Arial;13;0",
+															"parentStyle": false,
+															"left": 302,
+															"top": 72,
+															"height": 13,
+															"alpha": 1.5707963267948966,
+															"distance": 15,
+															"hostEdge": {
+																"$ref": "AAAAAAGT3GHpLoMHMRg="
+															},
+															"edgePosition": 1
+														},
+														{
+															"_type": "EdgeLabelView",
+															"_id": "AAAAAAGT3GHpLoMJccc=",
+															"_parent": {
+																"$ref": "AAAAAAGT3GHpLoMHMRg="
+															},
+															"model": {
+																"$ref": "AAAAAAGT3GHpLoMGPOA="
+															},
+															"visible": null,
+															"font": "Arial;13;0",
+															"parentStyle": false,
+															"left": 317,
+															"top": 73,
+															"height": 13,
+															"alpha": 1.5707963267948966,
+															"distance": 30,
+															"hostEdge": {
+																"$ref": "AAAAAAGT3GHpLoMHMRg="
+															},
+															"edgePosition": 1
+														},
+														{
+															"_type": "EdgeLabelView",
+															"_id": "AAAAAAGT3GHpLoMKvJA=",
+															"_parent": {
+																"$ref": "AAAAAAGT3GHpLoMHMRg="
+															},
+															"model": {
+																"$ref": "AAAAAAGT3GHpLoMGPOA="
+															},
+															"visible": false,
+															"font": "Arial;13;0",
+															"parentStyle": false,
+															"left": 273,
+															"top": 71,
+															"height": 13,
+															"alpha": -1.5707963267948966,
+															"distance": 15,
+															"hostEdge": {
+																"$ref": "AAAAAAGT3GHpLoMHMRg="
+															},
+															"edgePosition": 1
+														}
+													],
+													"font": "Arial;13;0",
+													"parentStyle": false,
+													"head": {
+														"$ref": "AAAAAAGT3GHZSYLvNVY="
+													},
+													"tail": {
+														"$ref": "AAAAAAGT3GHIJoLqGK0="
+													},
+													"lineStyle": 1,
+													"points": "289:53;287:103",
+													"showVisibility": true,
+													"nameLabel": {
+														"$ref": "AAAAAAGT3GHpLoMIfck="
+													},
+													"stereotypeLabel": {
+														"$ref": "AAAAAAGT3GHpLoMJccc="
+													},
+													"propertyLabel": {
+														"$ref": "AAAAAAGT3GHpLoMKvJA="
+													}
+												}
+											]
+										}
+									],
+									"nodes": [
+										{
+											"_type": "UMLInitialNode",
+											"_id": "AAAAAAGT3GHIJoLoMG0=",
+											"_parent": {
+												"$ref": "AAAAAAGT3GEueoLjygQ="
+											},
+											"name": "InitialNode1"
+										},
+										{
+											"_type": "UMLAction",
+											"_id": "AAAAAAGT3GHZSILtzuQ=",
+											"_parent": {
+												"$ref": "AAAAAAGT3GEueoLjygQ="
+											},
+											"name": "Action1"
+										}
+									],
+									"edges": [
+										{
+											"_type": "UMLControlFlow",
+											"_id": "AAAAAAGT3GHpLoMGPOA=",
+											"_parent": {
+												"$ref": "AAAAAAGT3GEueoLjygQ="
+											},
+											"source": {
+												"$ref": "AAAAAAGT3GHIJoLoMG0="
+											},
+											"target": {
+												"$ref": "AAAAAAGT3GHZSILtzuQ="
+											}
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"_type": "UMLModel",
+			"_id": "AAAAAAGT3Fy/g4KbyBo=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "NvChad",
+			"ownedElements": [
+				{
+					"_type": "UMLPackage",
+					"_id": "AAAAAAGN+JgaYAGJ2Z8=",
+					"_parent": {
+						"$ref": "AAAAAAGT3Fy/g4KbyBo="
+					},
+					"name": "core",
+					"ownedElements": [
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAGN+JpylQJtEcI=",
+							"_parent": {
+								"$ref": "AAAAAAGN+JgaYAGJ2Z8="
+							},
+							"name": "init.lua"
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAGN+JpAtQIZ3kw=",
+							"_parent": {
+								"$ref": "AAAAAAGN+JgaYAGJ2Z8="
+							},
+							"name": "bootstrap.lua",
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAGN+J3cSwV+sW4=",
+									"_parent": {
+										"$ref": "AAAAAAGN+JpAtQIZ3kw="
+									},
+									"name": "echo",
+									"documentation": "调用M.echo()，会清除屏幕后，加粗显示str变量中的内容",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGN+J61NAWHOIE=",
+											"_parent": {
+												"$ref": "AAAAAAGN+J3cSwV+sW4="
+											},
+											"name": "str",
+											"type": ""
+										}
+									]
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAGN+J7bZwWJYlg=",
+									"_parent": {
+										"$ref": "AAAAAAGN+JpAtQIZ3kw="
+									},
+									"name": "shell_call",
+									"documentation": "自定义local shell_call()的Lua函数，用于在NeoVim中执行系统命令并检查是否成功。",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGN+J8C8wWQjgU=",
+											"_parent": {
+												"$ref": "AAAAAAGN+J7bZwWJYlg="
+											},
+											"name": "args",
+											"documentation": "用于在Neovim中执行系统命令，并检查是否调用成功。",
+											"type": ""
+										}
+									]
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAGN+J/dowWTQB4=",
+									"_parent": {
+										"$ref": "AAAAAAGN+JpAtQIZ3kw="
+									},
+									"name": "lazy",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGN+KAEowWaB3E=",
+											"_parent": {
+												"$ref": "AAAAAAGN+J/dowWTQB4="
+											},
+											"name": "install_path",
+											"type": ""
+										}
+									]
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAGN+KCR4wWc4Ts=",
+									"_parent": {
+										"$ref": "AAAAAAGN+JpAtQIZ3kw="
+									},
+									"name": "gen_chadrc_template",
+									"documentation": "用于生成Neovim的自定义配置文件模板。\n自定义配置文件模板的文件路径为：~/.config/nvim/lua/custom\n\n会提示是否安装示例自定义配置。\n如果输入y，则从https://github.cvom/NvChad/example_config中下载。\n如果输入其它，则只创建一个~/.config/nvim/lua/custom/chadrc.lua文件，里面写一句话：“---@type ChadrcConfig\\nlocal M = {}\\n\\nM.ui = { theme = 'onedark' }\\n\\nreturn M”"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAGN+JpbJwJDD0g=",
+							"_parent": {
+								"$ref": "AAAAAAGN+JgaYAGJ2Z8="
+							},
+							"name": "default_config.lua",
+							"documentation": "这里是neovim插件默认配置的地方，不建议在这里做任何修改。"
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAGN+JqEqgKXaf8=",
+							"_parent": {
+								"$ref": "AAAAAAGN+JgaYAGJ2Z8="
+							},
+							"name": "mappings.lua"
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAGN+Jqg1ALCpAY=",
+							"_parent": {
+								"$ref": "AAAAAAGN+JgaYAGJ2Z8="
+							},
+							"name": "utils.lua",
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAGT10L3yoA4ZZg=",
+									"_parent": {
+										"$ref": "AAAAAAGN+Jqg1ALCpAY="
+									},
+									"name": "load_config",
+									"documentation": "这里是用来加载Neovim的配置。\n文件来源有两处：\n\n1. lua/core/default_config.lua\n2. lua/custom/chadrc.lua\n\n会将这两处的内容进行merge，然后返回给neovim。"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAGT10V9IoBD9Xc=",
+									"_parent": {
+										"$ref": "AAAAAAGN+Jqg1ALCpAY="
+									},
+									"name": "remove_disabled_keys"
+								}
+							]
+						}
+					],
+					"documentation": "核心模块中的代码不建议私自更改。\n针对客制化的使用配置方面的调整，都可以在lua/custom/下实现。"
+				},
+				{
+					"_type": "UMLPackage",
+					"_id": "AAAAAAGN+JihIQGNkOI=",
+					"_parent": {
+						"$ref": "AAAAAAGT3Fy/g4KbyBo="
+					},
+					"name": "plugins",
+					"ownedElements": [
+						{
+							"_type": "UMLPackage",
+							"_id": "AAAAAAGN+JjLMAGR1f4=",
+							"_parent": {
+								"$ref": "AAAAAAGN+JihIQGNkOI="
+							},
+							"name": "configs",
+							"ownedElements": [
+								{
+									"_type": "UMLClass",
+									"_id": "AAAAAAGN+JweyAPorr4=",
+									"_parent": {
+										"$ref": "AAAAAAGN+JjLMAGR1f4="
+									},
+									"name": "cmp.lua"
+								},
+								{
+									"_type": "UMLClass",
+									"_id": "AAAAAAGN+Jw0MwQqMFQ=",
+									"_parent": {
+										"$ref": "AAAAAAGN+JjLMAGR1f4="
+									},
+									"name": "lazy_nvim.lua"
+								},
+								{
+									"_type": "UMLClass",
+									"_id": "AAAAAAGN+JxQSARUY8g=",
+									"_parent": {
+										"$ref": "AAAAAAGN+JjLMAGR1f4="
+									},
+									"name": "lspconfig.lua"
+								},
+								{
+									"_type": "UMLClass",
+									"_id": "AAAAAAGN+JxnUQR+Qxw=",
+									"_parent": {
+										"$ref": "AAAAAAGN+JjLMAGR1f4="
+									},
+									"name": "mason.lua"
+								},
+								{
+									"_type": "UMLClass",
+									"_id": "AAAAAAGN+Jx7PgSojyc=",
+									"_parent": {
+										"$ref": "AAAAAAGN+JjLMAGR1f4="
+									},
+									"name": "nvimtree.lua"
+								},
+								{
+									"_type": "UMLClass",
+									"_id": "AAAAAAGN+JzU/AVL6Zw=",
+									"_parent": {
+										"$ref": "AAAAAAGN+JjLMAGR1f4="
+									},
+									"name": "others.lua"
+								},
+								{
+									"_type": "UMLClass",
+									"_id": "AAAAAAGN+Jz7jwVPvpI=",
+									"_parent": {
+										"$ref": "AAAAAAGN+JjLMAGR1f4="
+									},
+									"name": "telescope.lua"
+								},
+								{
+									"_type": "UMLClass",
+									"_id": "AAAAAAGN+J0loQVTM6E=",
+									"_parent": {
+										"$ref": "AAAAAAGN+JjLMAGR1f4="
+									},
+									"name": "treesitter.lua"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAGN+JvxrQO9IW4=",
+							"_parent": {
+								"$ref": "AAAAAAGN+JihIQGNkOI="
+							},
+							"name": "init.lua"
+						}
+					]
+				},
+				{
+					"_type": "UMLPackage",
+					"_id": "AAAAAAGT1rNeHjstJIQ=",
+					"_parent": {
+						"$ref": "AAAAAAGT3Fy/g4KbyBo="
+					},
+					"name": "custom",
+					"ownedElements": [
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAGT1sPO+zv0HNY=",
+							"_parent": {
+								"$ref": "AAAAAAGT1rNeHjstJIQ="
+							},
+							"name": "mappings"
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAGT1t8/Kj5kIwc=",
+							"_parent": {
+								"$ref": "AAAAAAGT1rNeHjstJIQ="
+							},
+							"name": "plugins"
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAGT1w17un5kJng=",
+							"_parent": {
+								"$ref": "AAAAAAGT1rNeHjstJIQ="
+							},
+							"name": "chadrc"
+						}
+					],
+					"documentation": "lua/custom目录下是一些客制化的配置内容"
+				},
+				{
+					"_type": "UMLClass",
+					"_id": "AAAAAAGN+JmR7AGbFLg=",
+					"_parent": {
+						"$ref": "AAAAAAGT3Fy/g4KbyBo="
+					},
+					"name": "init.lua"
+				}
+			],
+			"documentation": "存放在~/.config/nvim中。"
+		},
+		{
+			"_type": "UMLModel",
+			"_id": "AAAAAAGT3F22OoKnTxA=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "data",
+			"ownedElements": [
+				{
+					"_type": "UMLPackage",
+					"_id": "AAAAAAGT3F8Jy4K+q3g=",
+					"_parent": {
+						"$ref": "AAAAAAGT3F22OoKnTxA="
+					},
+					"name": "mason"
+				},
+				{
+					"_type": "UMLPackage",
+					"_id": "AAAAAAGT3F8txYLCj9Q=",
+					"_parent": {
+						"$ref": "AAAAAAGT3F22OoKnTxA="
+					},
+					"name": "nvchad"
+				},
+				{
+					"_type": "UMLPackage",
+					"_id": "AAAAAAGT3F7DPoK6Az0=",
+					"_parent": {
+						"$ref": "AAAAAAGT3F22OoKnTxA="
+					},
+					"name": "lazy",
+					"ownedElements": [
+						{
+							"_type": "UMLModel",
+							"_id": "AAAAAAGT3F9TQoLGU1g=",
+							"_parent": {
+								"$ref": "AAAAAAGT3F7DPoK6Az0="
+							},
+							"name": "lazy.nvim",
+							"ownedElements": [
+								{
+									"_type": "UMLClass",
+									"_id": "AAAAAAGT3F/dpYLTw9k=",
+									"_parent": {
+										"$ref": "AAAAAAGT3F9TQoLGU1g="
+									},
+									"name": "init",
+									"operations": [
+										{
+											"_type": "UMLOperation",
+											"_id": "AAAAAAGT3F/vz4LWsxk=",
+											"_parent": {
+												"$ref": "AAAAAAGT3F/dpYLTw9k="
+											},
+											"name": "setup"
 										}
 									]
 								}
