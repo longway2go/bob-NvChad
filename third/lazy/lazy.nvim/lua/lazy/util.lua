@@ -1,16 +1,27 @@
+--------------------------------------------------------------------
+--- lazy/util.lua
+--- 定义了lazy.nvim的LazyUtil模块，提供了一系列用于常见任务的实用函数。
+--------------------------------------------------------------------
+
+-- 文档注释，表明M继承自一个基类LazyUtilCore
 ---@class LazyUtil: LazyUtilCore
+-- 创建一个表M，并将其元素设置为继承require("lazy.core.util")中的方法。
+-- 这使得M既可以访问核心使用模块中的函数，又可以定义自己的函数。
 local M = setmetatable({}, { __index = require("lazy.core.util") })
 
+-- file_exists(): 检查文件是否存在。
 function M.file_exists(file)
   return vim.uv.fs_stat(file) ~= nil
 end
 
 ---@param opts? LazyFloatOptions
 ---@return LazyFloat
+-- float(): 创建一个浮动窗口。
 function M.float(opts)
   return require("lazy.view.float")(opts)
 end
 
+-- wo(): 将窗口选项k设置为值v
 function M.wo(win, k, v)
   if vim.api.nvim_set_option_value then
     vim.api.nvim_set_option_value(k, v, { scope = "local", win = win })
@@ -20,6 +31,7 @@ function M.wo(win, k, v)
 end
 
 ---@param opts? {system?:boolean}
+-- open(): 根据选项打开一个URI(文件或网址)
 function M.open(uri, opts)
   opts = opts or {}
   if not opts.system and M.file_exists(uri) then
@@ -54,6 +66,7 @@ function M.open(uri, opts)
   end
 end
 
+-- 读取文件的内容并将其作为字符串返回
 function M.read_file(file)
   local fd = assert(io.open(file, "r"))
   ---@type string
@@ -62,6 +75,7 @@ function M.read_file(file)
   return data
 end
 
+-- 将提供的contents写入文件
 function M.write_file(file, contents)
   local fd = assert(io.open(file, "w+"))
   fd:write(contents)
@@ -72,6 +86,7 @@ end
 ---@param ms number
 ---@param fn F
 ---@return F
+-- throttle(): 创建一个节流函数，将函数最多每ms执行一次fn
 function M.throttle(ms, fn)
   ---@type Async
   local async
@@ -99,6 +114,7 @@ end
 ---@generic T: table
 ---@param obj T
 ---@return T|fun():T?
+-- weak(): 创建对对象的弱引用，允许在不使用时进行垃圾回收
 function M.weak(obj)
   local weak = { _obj = obj }
   ---@return table<any, any>
@@ -132,6 +148,7 @@ end
 -- Opens a floating terminal (interactive by default)
 ---@param cmd? string[]|string
 ---@param opts? LazyCmdOptions|{interactive?:boolean}
+-- float_term(): 使用提供的命令和选项打开一个浮动终端（默认情况下为交互式）
 function M.float_term(cmd, opts)
   cmd = cmd or {}
   if type(cmd) == "string" then
@@ -160,6 +177,7 @@ end
 --- Runs the command and shows it in a floating window
 ---@param cmd string[]
 ---@param opts? LazyCmdOptions|{filetype?:string}
+-- 执行一个命令，捕获其输出，并使用可选的文件类型将其显示在浮动窗口中
 function M.float_cmd(cmd, opts)
   opts = opts or {}
   local Process = require("lazy.manage.process")
@@ -183,11 +201,13 @@ function M.float_cmd(cmd, opts)
 end
 
 ---@deprecated use float_term or float_cmd instead
+-- 已弃用，改用M.float_term()
 function M.open_cmd()
   M.warn([[`require("lazy.util").open_cmd()` is deprecated. Please use `float_term` instead. Check the docs]])
 end
 
 ---@return string?
+-- 读取文件的第一行并返回
 function M.head(file)
   local f = io.open(file)
   if f then
@@ -198,6 +218,7 @@ function M.head(file)
 end
 
 ---@return {branch: string, hash:string}?
+-- 检索有关当前检出的Git分支和哈希的信息
 function M.git_info(dir)
   local line = M.head(dir .. "/.git/HEAD")
   if line then
@@ -215,6 +236,7 @@ end
 
 ---@param msg string|string[]
 ---@param opts? table
+-- 使用vim.notify()显示带有自定义格式和选项的markdown消息
 function M.markdown(msg, opts)
   if type(msg) == "table" then
     msg = table.concat(msg, "\n") or msg
@@ -236,6 +258,7 @@ function M.markdown(msg, opts)
   )
 end
 
+-- dump(): 内部辅助函数，以递归方式将值转换为字符串以进行表示
 function M._dump(value, result)
   local t = type(value)
   if t == "number" or t == "boolean" then
@@ -268,6 +291,7 @@ function M._dump(value, result)
   end
 end
 
+-- dump(): 使用M._dump()将值（表、字符串、数字等）转换为字符串表示形式。
 function M.dump(value)
   local result = {}
   M._dump(value, result)
@@ -278,6 +302,7 @@ end
 ---@param t table<string, V>
 ---@param fn fun(key:string, value:V)
 ---@param opts? {case_sensitive?:boolean}
+-- foreach(): 遍历表t，并为每个键值对调用函数fn。允许可选的大小写敏感排序。
 function M.foreach(t, fn, opts)
   ---@type string[]
   local keys = vim.tbl_keys(t)
