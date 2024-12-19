@@ -289,5 +289,5 @@ if #config.plugins > 0 then
 end
 
 -- lazy模块实际的路径为：`~/.local/share/nvim/lazy/lazy.nvim/`,由于在lua/core/bootstrap.lua中已经将这个路径记录在了运行时路径的最前面，所以在查找模块的时候可以被优先找到。
--- config.lazy_nvim在哪里呢？我没有找到
+-- config.lazy_nvim在哪里呢？我没有找到。说是默认lazy_nvim为true。
 require("lazy").setup(default_plugins, config.lazy_nvim)

@@ -17,6 +17,8 @@ M._start = 0
 -- 检查vim.uv库是否可用（用于异步操作）。如果不可用，则回退到vim.loop。
 vim.uv = vim.uv or vim.loop
 
+-- profile_require(): 在lazy.nvim的设置过程中，分析require函数的调用情况，以便进行性能分析和优化。
+-- 它用来记录和跟踪哪些模块被加载了，以及加载它们所花费的时间。
 local function profile_require()
   -- done表用来跟踪哪些模块已被分析
   local done = {} ---@type table<string, true>
@@ -73,7 +75,8 @@ function M.setup(spec, opts)
   -- 设定vim.g.lazy_did_setup,避免未来重复加载
   vim.g.lazy_did_setup = true
 
-
+  -- 用于检查Neovim的loadplugins全局选项是否被设置。
+  -- 用来决定是否继续执行插件的加载过程。
   if not vim.go.loadplugins then
     return
   end
